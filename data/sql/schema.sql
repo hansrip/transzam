@@ -1,0 +1,11 @@
+CREATE TABLE user (id BIGINT AUTO_INCREMENT, name VARCHAR(255), login VARCHAR(255), password VARCHAR(255), mobile_number BIGINT, token VARCHAR(255), number_of_trucks BIGINT, PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE district (id BIGINT AUTO_INCREMENT, name VARCHAR(50), province_id BIGINT NOT NULL, INDEX province_id_idx (province_id), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE package (id BIGINT AUTO_INCREMENT, name VARCHAR(50), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE province (id BIGINT AUTO_INCREMENT, name VARCHAR(50), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE transport_load (id BIGINT AUTO_INCREMENT, customer_id BIGINT NOT NULL, transporter_id BIGINT NOT NULL, posted_at DATETIME NOT NULL, from_district BIGINT NOT NULL, to_district BIGINT NOT NULL, load_description VARCHAR(50), package_id BIGINT NOT NULL, weight INT DEFAULT 0 NOT NULL, arrive_before DATETIME NOT NULL, arrive_after DATETIME, expired_at DATETIME, bid_id VARCHAR(9) DEFAULT 'Open', comment VARCHAR(255), created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX from_district_idx (from_district), INDEX to_district_idx (to_district), INDEX customer_id_idx (customer_id), INDEX transporter_id_idx (transporter_id), INDEX package_id_idx (package_id), PRIMARY KEY(id)) ENGINE = INNODB;
+ALTER TABLE district ADD CONSTRAINT district_province_id_province_id FOREIGN KEY (province_id) REFERENCES province(id);
+ALTER TABLE transport_load ADD CONSTRAINT transport_load_transporter_id_user_id FOREIGN KEY (transporter_id) REFERENCES user(id);
+ALTER TABLE transport_load ADD CONSTRAINT transport_load_to_district_district_id FOREIGN KEY (to_district) REFERENCES district(id);
+ALTER TABLE transport_load ADD CONSTRAINT transport_load_package_id_package_id FOREIGN KEY (package_id) REFERENCES package(id);
+ALTER TABLE transport_load ADD CONSTRAINT transport_load_from_district_district_id FOREIGN KEY (from_district) REFERENCES district(id);
+ALTER TABLE transport_load ADD CONSTRAINT transport_load_customer_id_user_id FOREIGN KEY (customer_id) REFERENCES user(id);
