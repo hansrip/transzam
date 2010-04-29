@@ -1,6 +1,6 @@
 <?php
 
-require_once 'C:\\dev\\sf_project\\lib\\vendor\\symfony\\lib/autoload/sfCoreAutoload.class.php';
+require_once 'C:\\dev\\symfony\\lib/autoload/sfCoreAutoload.class.php';
 sfCoreAutoload::register();
 
 class ProjectConfiguration extends sfProjectConfiguration
