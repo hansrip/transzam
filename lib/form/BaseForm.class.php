@@ -5,7 +5,7 @@
  *
  * @package    transzam
  * @subpackage form
- * @author     sf_project2
+ * @author     Hans Rip
  * @version    SVN: $Id: BaseForm.class.php 20147 2009-07-13 11:46:57Z FabianLange $
  */
 class BaseForm extends sfFormSymfony

@@ -1,0 +1,73 @@
+# Detect relations between the tables
+detect_relations: true
+
+# TranszamPackage has different kind of PackType, like bags, container, pallets, cooling, other, etc
+Package:
+  columns:
+   name: { type: string(50) }
+
+# TranszamProvince describes the provinces
+Province:
+  columns:
+    name: { type: string(50) }
+
+# TranszamDistrict describes all the districts
+District:
+  columns:
+   name: { type: string(50) }
+   province_id: { type: integer, notnull: true }
+
+# TranszamUser describes the userdetails
+User:
+  columns:
+    name: { type: string(255) }
+    login: { name: login as username, type: string(255) }
+# Checken op 097
+    password: { type: string(255) }
+    mobile_number: { type: integer }
+    token: { type: string(255) }
+
+# TanszamCustomer describes the customer
+# TODO: options to make a concrete extension? This is to create easier and more efficient queries
+Customer:
+  inheritance:
+    extends: User
+    type: simple
+  columns:
+    number_of_trucks: { type: integer }
+
+# TranszamTransporter describes the transporter
+# TODO: options to make a concrete extension? This to create easier and more efficient queries
+Transporter:
+  inheritance:
+    extends: User
+    type: simple
+
+# TranszamTransportLoad has loads from the customer to the transporter.
+TransportLoad:
+  actAs: {Timestampable: ~ }
+  columns:
+    customer_id: { type: integer, notnull: true }
+    transporter_id: { type: integer, notnull: true }
+    posted_at: { type: timestamp, notnull: true }
+    from_district: { name: from_district as from, type: integer, notnull: true }
+    to_district: { name: to_district as to, type: integer, notnull: true }
+    load_description: { type: string(50) }
+    package_id: { type: string(50), notnull: true }
+    weight: { type: int, notnull: true, default: 0 }
+    arrive_before: { type: timestamp, notnull: true }
+    arrive_after: { type: timestamp }
+    expired_at: { type: timestamp }
+    bid_id: { type: enum, length: 9, values: [ 'Open', 'Taken', 'Cancelled' ], default: 'Open' }
+    comment: { type: string(255) }
+  relations:
+      FromDistrict:
+        class: District
+        local: from_district
+        foreign: id
+        foreignAlias: FromDistricts
+      ToDistrict:
+        class: District
+        local: to_district
+        foreign: id
+        foreignAlias: ToDistricts
