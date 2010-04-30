@@ -58,7 +58,7 @@ TransportLoad:
     arrive_before: { type: timestamp, notnull: true }
     arrive_after: { type: timestamp }
     expired_at: { type: timestamp }
-    bid_id: { type: enum, length: 9, values: [ 'Open', 'Taken', 'Cancelled' ], default: 'Open' }
+    bid: { type: enum, length: 9, values: [ 'Open', 'Taken', 'Cancelled' ], default: 'Open' }
     comment: { type: string(255) }
   relations:
       FromDistrict:

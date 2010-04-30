@@ -16,7 +16,7 @@
  * @property timestamp $arrive_before
  * @property timestamp $arrive_after
  * @property timestamp $expired_at
- * @property enum $bid_id
+ * @property enum $bid
  * @property string $comment
  * @property District $FromDistrict
  * @property District $ToDistrict
@@ -35,7 +35,7 @@
  * @method timestamp     getArriveBefore()     Returns the current record's "arrive_before" value
  * @method timestamp     getArriveAfter()      Returns the current record's "arrive_after" value
  * @method timestamp     getExpiredAt()        Returns the current record's "expired_at" value
- * @method enum          getBidId()            Returns the current record's "bid_id" value
+ * @method enum          getBid()              Returns the current record's "bid" value
  * @method string        getComment()          Returns the current record's "comment" value
  * @method District      getFromDistrict()     Returns the current record's "FromDistrict" value
  * @method District      getToDistrict()       Returns the current record's "ToDistrict" value
@@ -53,7 +53,7 @@
  * @method TransportLoad setArriveBefore()     Sets the current record's "arrive_before" value
  * @method TransportLoad setArriveAfter()      Sets the current record's "arrive_after" value
  * @method TransportLoad setExpiredAt()        Sets the current record's "expired_at" value
- * @method TransportLoad setBidId()            Sets the current record's "bid_id" value
+ * @method TransportLoad setBid()              Sets the current record's "bid" value
  * @method TransportLoad setComment()          Sets the current record's "comment" value
  * @method TransportLoad setFromDistrict()     Sets the current record's "FromDistrict" value
  * @method TransportLoad setToDistrict()       Sets the current record's "ToDistrict" value
@@ -117,7 +117,7 @@ abstract class BaseTransportLoad extends sfDoctrineRecord
         $this->hasColumn('expired_at', 'timestamp', null, array(
              'type' => 'timestamp',
              ));
-        $this->hasColumn('bid_id', 'enum', 9, array(
+        $this->hasColumn('bid', 'enum', 9, array(
              'type' => 'enum',
              'length' => 9,
              'values' => 
