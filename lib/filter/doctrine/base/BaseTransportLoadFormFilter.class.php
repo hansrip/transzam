@@ -15,7 +15,6 @@ abstract class BaseTransportLoadFormFilter extends BaseFormFilterDoctrine
     $this->setWidgets(array(
       'customer_id'      => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Customer'), 'add_empty' => true)),
       'transporter_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Transporter'), 'add_empty' => true)),
-      'posted_at'        => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'from'             => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('FromDistrict'), 'add_empty' => true)),
       'to'               => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('ToDistrict'), 'add_empty' => true)),
       'load_description' => new sfWidgetFormFilterInput(),
@@ -33,7 +32,6 @@ abstract class BaseTransportLoadFormFilter extends BaseFormFilterDoctrine
     $this->setValidators(array(
       'customer_id'      => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Customer'), 'column' => 'id')),
       'transporter_id'   => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Transporter'), 'column' => 'id')),
-      'posted_at'        => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'from'             => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('FromDistrict'), 'column' => 'id')),
       'to'               => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('ToDistrict'), 'column' => 'id')),
       'load_description' => new sfValidatorPass(array('required' => false)),
@@ -68,7 +66,6 @@ abstract class BaseTransportLoadFormFilter extends BaseFormFilterDoctrine
       'id'               => 'Number',
       'customer_id'      => 'ForeignKey',
       'transporter_id'   => 'ForeignKey',
-      'posted_at'        => 'Date',
       'from'             => 'ForeignKey',
       'to'               => 'ForeignKey',
       'load_description' => 'Text',

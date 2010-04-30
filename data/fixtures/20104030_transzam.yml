@@ -33,7 +33,6 @@
   id: 1
   customer_id: 1
   transporter_id: 2
-  posted_at: 2010-04-30 00:00:00
   from_district: 7
   to_district: 7
   load_description: Butter, Cheese and Eggs

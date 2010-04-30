@@ -7,7 +7,6 @@
  * 
  * @property integer $customer_id
  * @property integer $transporter_id
- * @property timestamp $posted_at
  * @property integer $from
  * @property integer $to
  * @property string $load_description
@@ -26,7 +25,6 @@
  * 
  * @method integer       getCustomerId()       Returns the current record's "customer_id" value
  * @method integer       getTransporterId()    Returns the current record's "transporter_id" value
- * @method timestamp     getPostedAt()         Returns the current record's "posted_at" value
  * @method integer       getFrom()             Returns the current record's "from" value
  * @method integer       getTo()               Returns the current record's "to" value
  * @method string        getLoadDescription()  Returns the current record's "load_description" value
@@ -44,7 +42,6 @@
  * @method Package       getPackage()          Returns the current record's "Package" value
  * @method TransportLoad setCustomerId()       Sets the current record's "customer_id" value
  * @method TransportLoad setTransporterId()    Sets the current record's "transporter_id" value
- * @method TransportLoad setPostedAt()         Sets the current record's "posted_at" value
  * @method TransportLoad setFrom()             Sets the current record's "from" value
  * @method TransportLoad setTo()               Sets the current record's "to" value
  * @method TransportLoad setLoadDescription()  Sets the current record's "load_description" value
@@ -80,10 +77,6 @@ abstract class BaseTransportLoad extends sfDoctrineRecord
              'type' => 'integer',
              'notnull' => true,
              'length' => 8,
-             ));
-        $this->hasColumn('posted_at', 'timestamp', null, array(
-             'type' => 'timestamp',
-             'notnull' => true,
              ));
         $this->hasColumn('from_district as from', 'integer', null, array(
              'type' => 'integer',

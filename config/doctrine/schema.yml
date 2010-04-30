@@ -49,7 +49,6 @@ TransportLoad:
   columns:
     customer_id: { type: integer, notnull: true }
     transporter_id: { type: integer, notnull: true }
-    posted_at: { type: timestamp, notnull: true }
     from_district: { name: from_district as from, type: integer, notnull: true }
     to_district: { name: to_district as to, type: integer, notnull: true }
     load_description: { type: string(50) }
