@@ -1,0 +1,67 @@
+User:
+  User_1:
+    name: hansrip
+    username: hans
+    password: mYsECRET
+    mobile_number: '978289631'
+    token: null
+    number_of_trucks: null
+  User_2:
+    name: ericsummeling
+    username: eric
+    password: mYsECRET
+    mobile_number: null
+    token: null
+    number_of_trucks: '10'
+Customer:
+  Customer_1:
+    name: hansrip
+    username: hans
+    password: mYsECRET
+    mobile_number: '978289631'
+    token: null
+    number_of_trucks: null
+Transporter:
+  Transporter_2:
+    name: ericsummeling
+    username: eric
+    password: mYsECRET
+    mobile_number: null
+    token: null
+    number_of_trucks: '10'
+Package:
+  Package_58:
+    name: Bag
+  Package_59:
+    name: Bulk
+  Package_60:
+    name: Container
+  Package_61:
+    name: Pallet
+  Package_62:
+    name: Cooling
+  Package_63:
+    name: Other
+Province:
+  Province_10:
+    name: Lusaka
+District:
+  District_7:
+    name: lusakacity
+    Province: Province_10
+TransportLoad:
+  TransportLoad_1:
+    Customer: Customer_1
+    Transporter: Transporter_2
+    from: '1'
+    to: '1'
+    load_description: 'Butter, Cheese and Eggs'
+    Package: Package_62
+    weight: '50'
+    arrive_before: '2010-05-01 00:00:00'
+    arrive_after: '2010-05-15 00:00:00'
+    expired_at: '2010-05-25 00:00:00'
+    bid: Open
+    comment: null
+    created_at: '2010-04-30 00:00:00'
+    updated_at: '2010-04-30 00:00:00'

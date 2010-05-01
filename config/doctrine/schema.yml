@@ -32,7 +32,9 @@ User:
 Customer:
   inheritance:
     extends: User
-    type: simple
+    type: column_aggregation
+    keyField: user_type
+    keyValue: customer
   columns:
     number_of_trucks: { type: integer }
 
@@ -41,7 +43,9 @@ Customer:
 Transporter:
   inheritance:
     extends: User
-    type: simple
+    type: column_aggregation
+    keyField: user_type
+    keyValue: transporter
 
 # TranszamTransportLoad has loads from the customer to the transporter.
 TransportLoad:

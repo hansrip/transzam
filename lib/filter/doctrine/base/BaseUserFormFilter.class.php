@@ -18,6 +18,7 @@ abstract class BaseUserFormFilter extends BaseFormFilterDoctrine
       'password'         => new sfWidgetFormFilterInput(),
       'mobile_number'    => new sfWidgetFormFilterInput(),
       'token'            => new sfWidgetFormFilterInput(),
+      'user_type'        => new sfWidgetFormFilterInput(),
       'number_of_trucks' => new sfWidgetFormFilterInput(),
     ));
 
@@ -27,6 +28,7 @@ abstract class BaseUserFormFilter extends BaseFormFilterDoctrine
       'password'         => new sfValidatorPass(array('required' => false)),
       'mobile_number'    => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'token'            => new sfValidatorPass(array('required' => false)),
+      'user_type'        => new sfValidatorPass(array('required' => false)),
       'number_of_trucks' => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
     ));
 
@@ -53,6 +55,7 @@ abstract class BaseUserFormFilter extends BaseFormFilterDoctrine
       'password'         => 'Text',
       'mobile_number'    => 'Number',
       'token'            => 'Text',
+      'user_type'        => 'Text',
       'number_of_trucks' => 'Number',
     );
   }

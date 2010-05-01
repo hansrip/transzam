@@ -21,6 +21,7 @@ abstract class BaseUserForm extends BaseFormDoctrine
       'password'         => new sfWidgetFormInputText(),
       'mobile_number'    => new sfWidgetFormInputText(),
       'token'            => new sfWidgetFormInputText(),
+      'user_type'        => new sfWidgetFormInputText(),
       'number_of_trucks' => new sfWidgetFormInputText(),
     ));
 
@@ -31,6 +32,7 @@ abstract class BaseUserForm extends BaseFormDoctrine
       'password'         => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'mobile_number'    => new sfValidatorInteger(array('required' => false)),
       'token'            => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'user_type'        => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'number_of_trucks' => new sfValidatorInteger(array('required' => false)),
     ));
 

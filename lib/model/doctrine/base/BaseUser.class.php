@@ -10,6 +10,7 @@
  * @property string $password
  * @property integer $mobile_number
  * @property string $token
+ * @property string $user_type
  * @property integer $number_of_trucks
  * 
  * @method string  getName()             Returns the current record's "name" value
@@ -17,12 +18,14 @@
  * @method string  getPassword()         Returns the current record's "password" value
  * @method integer getMobileNumber()     Returns the current record's "mobile_number" value
  * @method string  getToken()            Returns the current record's "token" value
+ * @method string  getUserType()         Returns the current record's "user_type" value
  * @method integer getNumberOfTrucks()   Returns the current record's "number_of_trucks" value
  * @method User    setName()             Sets the current record's "name" value
  * @method User    setUsername()         Sets the current record's "username" value
  * @method User    setPassword()         Sets the current record's "password" value
  * @method User    setMobileNumber()     Sets the current record's "mobile_number" value
  * @method User    setToken()            Sets the current record's "token" value
+ * @method User    setUserType()         Sets the current record's "user_type" value
  * @method User    setNumberOfTrucks()   Sets the current record's "number_of_trucks" value
  * 
  * @package    transzam
@@ -54,8 +57,23 @@ abstract class BaseUser extends sfDoctrineRecord
              'type' => 'string',
              'length' => 255,
              ));
+        $this->hasColumn('user_type', 'string', 255, array(
+             'type' => 'string',
+             'length' => 255,
+             ));
         $this->hasColumn('number_of_trucks', 'integer', null, array(
              'type' => 'integer',
+             ));
+
+        $this->setSubClasses(array(
+             'Customer' => 
+             array(
+              'user_type' => 'customer',
+             ),
+             'Transporter' => 
+             array(
+              'user_type' => 'transporter',
+             ),
              ));
     }
 
