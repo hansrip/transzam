@@ -1,0 +1,63 @@
+Province:
+  lusaka:
+    name: Lusaka
+
+District:
+  lusakacity:
+    name: Lusaka City
+    province: lusaka
+
+Transporter:
+  trans_eric:
+    sf_guard_user_id: sgu_eric
+    company: Summeling
+    district_id: lusakacity
+    address: 'indepedent avenue 231'
+    email_address: 'summeling@example.com'
+    tel: '0876666666'
+    cell: '0876666666'
+    comment: De tweede user aangemaakt ooit
+    number_of_trucks: '10'
+
+Customer:
+  cust_hans:
+    sf_guard_user_id: sgu_hans
+    company: AuxZambia
+    district_id: lusakacity
+    address: leopard hill 2342
+    email_address: 'rip@example.com'
+    tel: '0876683452'
+    cell: '0876683452'
+    comment: De eerste user aangemaakt ooit
+    business: Zuivelwaar
+
+Package:
+  Bag:
+    name: Bag
+  Bulk:
+    name: Bulk
+  Container:
+    name: Container
+  Pallet:
+    name: Pallet
+  Cooling:
+    name: Cooling
+  Other:
+    name: Other
+
+TransportLoad:
+  TransportLoad_1:
+    Customer: cust_hans
+    Transporter: trans_eric
+    from: lusakacity
+    to: lusakacity
+    load_description: 'Butter, Cheese and Eggs'
+    Package: Cooling
+    weight: '50'
+    arrive_before: '2010-05-01 00:00:00'
+    arrive_after: '2010-05-15 00:00:00'
+    expired_at: '2010-05-25 00:00:00'
+    bid: Open
+    comment: null
+    created_at: '2010-04-30 00:00:00'
+    updated_at: '2010-04-30 00:00:00'

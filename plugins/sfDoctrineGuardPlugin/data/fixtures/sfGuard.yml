@@ -1,0 +1,57 @@
+sfGuardUser:
+  sgu_admin:
+    username:       admin
+    password:       admin
+    is_super_admin: true
+  sgu_hans:
+     username: hansrip
+     password: mYsECRET
+     is_super_admin: false
+  sgu_eric:
+     username: ericsummeling
+     password: mYsECRET
+     is_super_admin: false
+
+sfGuardPermission:
+  sgp_admin:
+    name:           admin
+    description:    Administrator permission
+  sgp_transporter:
+    name:           transporter
+    description:    Transporter permission
+  sgp_customer:
+    name:           customer
+    description:    Customer permission
+
+sfGuardGroup:
+  sgg_admin:
+    name:           admin
+    description:    Administrator group
+  sgg_transporter:
+    name:           transporter
+    description:    Traqnsporter group
+  sgg_customer:
+    name:           customer
+    description:    Customer group
+
+sfGuardGroupPermission:
+  sggp_admin:
+    sfGuardGroup:       sgg_admin
+    sfGuardPermission:  sgp_admin
+  sggp_transporter:
+    sfGuardGroup:       sgg_transporter
+    sfGuardPermission:  sgp_transporter
+  sggp_customer:
+    sfGuardGroup:       sgg_customer
+    sfGuardPermission:  sgp_customer
+
+sfGuardUserGroup:
+  sgug_admin:
+    sfGuardGroup:       sgg_admin
+    sfGuardUser:        sgu_admin
+  sgug_hans:
+    sfGuardGroup:       sgg_customer
+    sfGuardUser:        sgu_hans
+  sgug_eric:
+    sfGuardGroup:       sgg_transporter
+    sfGuardUser:        sgu_eric

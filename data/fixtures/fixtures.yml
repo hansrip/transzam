@@ -1,62 +1,60 @@
-User:
-  User_1:
-    name: hansrip
-    username: hans
-    password: mYsECRET
-    mobile_number: '978289631'
-    token: null
-    number_of_trucks: null
-  User_2:
-    name: ericsummeling
-    username: eric
-    password: mYsECRET
-    mobile_number: null
-    token: null
-    number_of_trucks: '10'
-Customer:
-  Customer_1:
-    name: hansrip
-    username: hans
-    password: mYsECRET
-    mobile_number: '978289631'
-    token: null
-    number_of_trucks: null
-Transporter:
-  Transporter_2:
-    name: ericsummeling
-    username: eric
-    password: mYsECRET
-    mobile_number: null
-    token: null
-    number_of_trucks: '10'
-Package:
-  Package_58:
-    name: Bag
-  Package_59:
-    name: Bulk
-  Package_60:
-    name: Container
-  Package_61:
-    name: Pallet
-  Package_62:
-    name: Cooling
-  Package_63:
-    name: Other
 Province:
-  Province_10:
+  lusaka:
+    id: '1'
     name: Lusaka
+
 District:
-  District_7:
-    name: lusakacity
-    Province: Province_10
+  lusakacity:
+    id: '1'
+    name: Lusaka City
+    province_id: '1'
+
+Transporter:
+  trans_eric:
+    GuardUser: sgu_eric
+    company: Summeling
+    District: lusakacity
+    address: 'indepedent avenue 231'
+    email_address: 'summeling@example.com'
+    tel: '0876666666'
+    cell: '0876666666'
+    comment: De tweede user aangemaakt ooit
+    number_of_trucks: '10'
+
+Customer:
+  cust_hans:
+    GuardUser: sgu_hans
+    company: AuxZambia
+    District: lusakacity
+    address: leopard hill 2342
+    email_address: 'rip@example.com'
+    tel: '0876683452'
+    cell: '0876683452'
+    comment: De eerste user aangemaakt ooit
+    business: Zuivelwaar
+
+Package:
+  Bag:
+    name: Bag
+  Bulk:
+    name: Bulk
+  Container:
+    name: Container
+  Pallet:
+    name: Pallet
+  Cooling:
+    name: Cooling
+  Other:
+    name: Other
+
 TransportLoad:
   TransportLoad_1:
-    Customer: Customer_1
-    Transporter: Transporter_2
-    from: '1'
-    to: '1'
+    Customer: cust_hans
+    Transporter: trans_eric
+    FromDistrict: lusakacity
+    ToDistrict: lusakacity
     load_description: 'Butter, Cheese and Eggs'
-    Package: Package_62
+    Package: Cooling
     weight: '50'
     arrive_before: '2010-05-01 00:00:00'
     arrive_after: '2010-05-15 00:00:00'

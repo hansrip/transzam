@@ -8,19 +8,19 @@
  * @property string $name
  * @property integer $province_id
  * @property Province $Province
- * @property Doctrine_Collection $FromDistricts
- * @property Doctrine_Collection $ToDistricts
+ * @property Doctrine_Collection $User
+ * @property Doctrine_Collection $TransportLoad
  * 
  * @method string              getName()          Returns the current record's "name" value
  * @method integer             getProvinceId()    Returns the current record's "province_id" value
  * @method Province            getProvince()      Returns the current record's "Province" value
- * @method Doctrine_Collection getFromDistricts() Returns the current record's "FromDistricts" collection
- * @method Doctrine_Collection getToDistricts()   Returns the current record's "ToDistricts" collection
+ * @method Doctrine_Collection getUser()          Returns the current record's "User" collection
+ * @method Doctrine_Collection getTransportLoad() Returns the current record's "TransportLoad" collection
  * @method District            setName()          Sets the current record's "name" value
  * @method District            setProvinceId()    Sets the current record's "province_id" value
  * @method District            setProvince()      Sets the current record's "Province" value
- * @method District            setFromDistricts() Sets the current record's "FromDistricts" collection
- * @method District            setToDistricts()   Sets the current record's "ToDistricts" collection
+ * @method District            setUser()          Sets the current record's "User" collection
+ * @method District            setTransportLoad() Sets the current record's "TransportLoad" collection
  * 
  * @package    transzam
  * @subpackage model
@@ -50,12 +50,12 @@ abstract class BaseDistrict extends sfDoctrineRecord
              'local' => 'province_id',
              'foreign' => 'id'));
 
-        $this->hasMany('TransportLoad as FromDistricts', array(
+        $this->hasMany('User', array(
+             'local' => 'id',
+             'foreign' => 'district_id'));
+
+        $this->hasMany('TransportLoad', array(
              'local' => 'id',
              'foreign' => 'from_district'));
-
-        $this->hasMany('TransportLoad as ToDistricts', array(
-             'local' => 'id',
-             'foreign' => 'to_district'));
     }
 }

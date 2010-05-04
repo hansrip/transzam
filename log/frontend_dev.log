@@ -1,0 +1,614 @@
+Apr 29 15:20:05 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Apr 29 17:31:27 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Apr 29 23:08:03 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Apr 30 09:06:01 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Apr 30 12:33:06 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /transportload with parameters array (  'module' => 'transportload',  'action' => 'index',)
+Apr 30 12:33:06 symfony [info] {sfFrontWebController} Action "transportload/index" does not exist
+Apr 30 12:33:06 symfony [err] {sfError404Exception} Action "transportload/index" does not exist.
+Apr 30 12:33:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 30 12:33:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 12:33:07 symfony [info] {sfWebDebugLogger} Configuration 39.14 ms (5)
+Apr 30 12:33:07 symfony [info] {sfWebDebugLogger} Factories 825.38 ms (1)
+Apr 30 12:36:21 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /transportload with parameters array (  'module' => 'transportload',  'action' => 'index',)
+Apr 30 12:36:21 symfony [info] {sfFrontWebController} Action "transportload/index" does not exist
+Apr 30 12:36:21 symfony [err] {sfError404Exception} Action "transportload/index" does not exist.
+Apr 30 12:36:21 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 30 12:36:21 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 12:36:21 symfony [info] {sfWebDebugLogger} Configuration 11.61 ms (5)
+Apr 30 12:36:21 symfony [info] {sfWebDebugLogger} Factories 83.12 ms (1)
+Apr 30 12:36:30 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /package with parameters array (  'module' => 'package',  'action' => 'index',)
+Apr 30 12:36:31 symfony [info] {sfFrontWebController} Action "package/index" does not exist
+Apr 30 12:36:31 symfony [err] {sfError404Exception} Action "package/index" does not exist.
+Apr 30 12:36:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 30 12:36:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 12:36:31 symfony [info] {sfWebDebugLogger} Configuration 11.43 ms (5)
+Apr 30 12:36:31 symfony [info] {sfWebDebugLogger} Factories 80.08 ms (1)
+Apr 30 12:36:44 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/package/index.php" (/).
+Apr 30 12:36:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 30 12:36:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 12:36:44 symfony [info] {sfWebDebugLogger} Configuration 5.22 ms (5)
+Apr 30 12:36:44 symfony [info] {sfWebDebugLogger} Factories 45.96 ms (1)
+Apr 30 12:42:13 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /load with parameters array (  'module' => 'load',  'action' => 'index',)
+Apr 30 12:42:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 12:42:14 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 12:42:14 symfony [info] {loadActions} Call "loadActions->executeIndex()"
+Apr 30 12:42:14 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 12:42:14 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.id AS t__id, t.customer_id AS t__customer_id, t.transporter_id AS t__transporter_id, t.from_district AS t__from_district, t.to_district AS t__to_district, t.load_description AS t__load_description, t.package_id AS t__package_id, t.weight AS t__weight, t.arrive_before AS t__arrive_before, t.arrive_after AS t__arrive_after, t.expired_at AS t__expired_at, t.bid AS t__bid, t.comment AS t__comment, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM transport_load t - ()
+Apr 30 12:42:14 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\modules/load/templates/indexSuccess.php"
+Apr 30 12:42:14 symfony [info] {sfPHPView} Decorate content with "C:\dev\transzam\apps\frontend\templates/layout.php"
+Apr 30 12:42:14 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\templates/layout.php"
+Apr 30 12:42:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 30 12:42:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 12:42:14 symfony [info] {sfWebDebugLogger} Configuration 207.75 ms (10)
+Apr 30 12:42:14 symfony [info] {sfWebDebugLogger} Factories 84.59 ms (1)
+Apr 30 12:42:14 symfony [info] {sfWebDebugLogger} Action "load/index" 394.47 ms (1)
+Apr 30 12:42:14 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Apr 30 12:42:14 symfony [info] {sfWebDebugLogger} View "Success" for "load/index" 332.11 ms (1)
+Apr 30 12:42:14 symfony [info] {sfWebResponse} Send content (33403 o)
+Apr 30 12:43:19 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /load/new with parameters array (  'module' => 'load',  'action' => 'new',)
+Apr 30 12:43:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 12:43:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 12:43:19 symfony [info] {loadActions} Call "loadActions->executeNew()"
+Apr 30 12:43:19 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\modules/load/templates/newSuccess.php"
+Apr 30 12:43:19 symfony [info] {sfPartialView} Render "C:\dev\transzam\apps\frontend\modules/load/templates/_form.php"
+Apr 30 12:43:19 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 12:43:19 symfony [info] {Doctrine_Connection_Mysql} query : SELECT u.id AS u__id, u.name AS u__name, u.login AS u__login, u.password AS u__password, u.mobile_number AS u__mobile_number, u.token AS u__token, u.number_of_trucks AS u__number_of_trucks FROM user u - ()
+Apr 30 12:43:19 symfony [info] {Doctrine_Connection_Mysql} query : SELECT u.id AS u__id, u.name AS u__name, u.login AS u__login, u.password AS u__password, u.mobile_number AS u__mobile_number, u.token AS u__token, u.number_of_trucks AS u__number_of_trucks FROM user u - ()
+Apr 30 12:43:19 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.name AS d__name, d.province_id AS d__province_id FROM district d - ()
+Apr 30 12:43:19 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.name AS d__name, d.province_id AS d__province_id FROM district d - ()
+Apr 30 12:43:19 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.name AS p__name FROM package p - ()
+Apr 30 12:43:19 symfony [info] {sfPHPView} Decorate content with "C:\dev\transzam\apps\frontend\templates/layout.php"
+Apr 30 12:43:19 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\templates/layout.php"
+Apr 30 12:43:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 30 12:43:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 12:43:19 symfony [info] {sfWebDebugLogger} Configuration 18.85 ms (9)
+Apr 30 12:43:19 symfony [info] {sfWebDebugLogger} Factories 61.35 ms (1)
+Apr 30 12:43:19 symfony [info] {sfWebDebugLogger} Action "load/new" 127.77 ms (1)
+Apr 30 12:43:19 symfony [info] {sfWebDebugLogger} View "Success" for "load/new" 260.57 ms (1)
+Apr 30 12:43:19 symfony [info] {sfWebDebugLogger} Partial "load/_form" 196.44 ms (1)
+Apr 30 12:43:19 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (6)
+Apr 30 12:43:19 symfony [info] {sfWebResponse} Send content (72327 o)
+Apr 30 12:43:29 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /load with parameters array (  'module' => 'load',  'action' => 'index',)
+Apr 30 12:43:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 12:43:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 12:43:29 symfony [info] {loadActions} Call "loadActions->executeIndex()"
+Apr 30 12:43:29 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 12:43:29 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.id AS t__id, t.customer_id AS t__customer_id, t.transporter_id AS t__transporter_id, t.from_district AS t__from_district, t.to_district AS t__to_district, t.load_description AS t__load_description, t.package_id AS t__package_id, t.weight AS t__weight, t.arrive_before AS t__arrive_before, t.arrive_after AS t__arrive_after, t.expired_at AS t__expired_at, t.bid AS t__bid, t.comment AS t__comment, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM transport_load t - ()
+Apr 30 12:43:29 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\modules/load/templates/indexSuccess.php"
+Apr 30 12:43:29 symfony [info] {sfPHPView} Decorate content with "C:\dev\transzam\apps\frontend\templates/layout.php"
+Apr 30 12:43:29 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\templates/layout.php"
+Apr 30 12:43:29 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 30 12:43:29 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 12:43:29 symfony [info] {sfWebDebugLogger} Configuration 18.68 ms (9)
+Apr 30 12:43:29 symfony [info] {sfWebDebugLogger} Factories 58.58 ms (1)
+Apr 30 12:43:29 symfony [info] {sfWebDebugLogger} Action "load/index" 65.47 ms (1)
+Apr 30 12:43:29 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Apr 30 12:43:29 symfony [info] {sfWebDebugLogger} View "Success" for "load/index" 28.45 ms (1)
+Apr 30 12:43:29 symfony [info] {sfWebResponse} Send content (33398 o)
+Apr 30 12:51:48 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /load with parameters array (  'module' => 'load',  'action' => 'index',)
+Apr 30 12:51:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 12:51:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 12:51:48 symfony [info] {loadActions} Call "loadActions->executeIndex()"
+Apr 30 12:51:49 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 12:51:49 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.id AS t__id, t.customer_id AS t__customer_id, t.transporter_id AS t__transporter_id, t.from_district AS t__from_district, t.to_district AS t__to_district, t.load_description AS t__load_description, t.package_id AS t__package_id, t.weight AS t__weight, t.arrive_before AS t__arrive_before, t.arrive_after AS t__arrive_after, t.expired_at AS t__expired_at, t.bid AS t__bid, t.comment AS t__comment, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM transport_load t - ()
+Apr 30 12:51:49 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\modules/load/templates/indexSuccess.php"
+Apr 30 12:51:49 symfony [info] {sfPHPView} Decorate content with "C:\dev\transzam\apps\frontend\templates/layout.php"
+Apr 30 12:51:49 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\templates/layout.php"
+Apr 30 12:51:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 30 12:51:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 12:51:49 symfony [info] {sfWebDebugLogger} Configuration 37.41 ms (9)
+Apr 30 12:51:49 symfony [info] {sfWebDebugLogger} Factories 148.16 ms (1)
+Apr 30 12:51:49 symfony [info] {sfWebDebugLogger} Action "load/index" 112.34 ms (1)
+Apr 30 12:51:49 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Apr 30 12:51:49 symfony [info] {sfWebDebugLogger} View "Success" for "load/index" 36.05 ms (1)
+Apr 30 12:51:49 symfony [info] {sfWebResponse} Send content (33849 o)
+Apr 30 12:51:53 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /load/show/id/1 with parameters array (  'module' => 'load',  'action' => 'show',  'id' => '1',)
+Apr 30 12:51:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 12:51:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 12:51:53 symfony [info] {loadActions} Call "loadActions->executeShow()"
+Apr 30 12:51:54 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 12:51:54 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.customer_id AS t__customer_id, t.transporter_id AS t__transporter_id, t.from_district AS t__from_district, t.to_district AS t__to_district, t.load_description AS t__load_description, t.package_id AS t__package_id, t.weight AS t__weight, t.arrive_before AS t__arrive_before, t.arrive_after AS t__arrive_after, t.expired_at AS t__expired_at, t.bid AS t__bid, t.comment AS t__comment, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM transport_load t WHERE (t.id = ?) LIMIT 1 - (1)
+Apr 30 12:51:54 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\modules/load/templates/showSuccess.php"
+Apr 30 12:51:54 symfony [info] {sfPHPView} Decorate content with "C:\dev\transzam\apps\frontend\templates/layout.php"
+Apr 30 12:51:54 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\templates/layout.php"
+Apr 30 12:51:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 30 12:51:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 12:51:54 symfony [info] {sfWebDebugLogger} Configuration 23.50 ms (9)
+Apr 30 12:51:54 symfony [info] {sfWebDebugLogger} Factories 65.99 ms (1)
+Apr 30 12:51:54 symfony [info] {sfWebDebugLogger} Action "load/show" 171.06 ms (1)
+Apr 30 12:51:54 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Apr 30 12:51:54 symfony [info] {sfWebDebugLogger} View "Success" for "load/show" 33.51 ms (1)
+Apr 30 12:51:54 symfony [info] {sfWebResponse} Send content (34489 o)
+Apr 30 12:51:56 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /load/edit/id/1 with parameters array (  'module' => 'load',  'action' => 'edit',  'id' => '1',)
+Apr 30 12:51:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 12:51:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 12:51:56 symfony [info] {loadActions} Call "loadActions->executeEdit()"
+Apr 30 12:51:56 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 12:51:56 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.customer_id AS t__customer_id, t.transporter_id AS t__transporter_id, t.from_district AS t__from_district, t.to_district AS t__to_district, t.load_description AS t__load_description, t.package_id AS t__package_id, t.weight AS t__weight, t.arrive_before AS t__arrive_before, t.arrive_after AS t__arrive_after, t.expired_at AS t__expired_at, t.bid AS t__bid, t.comment AS t__comment, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM transport_load t WHERE (t.id = ?) LIMIT 1 - (1)
+Apr 30 12:51:57 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\modules/load/templates/editSuccess.php"
+Apr 30 12:51:57 symfony [info] {sfPartialView} Render "C:\dev\transzam\apps\frontend\modules/load/templates/_form.php"
+Apr 30 12:51:57 symfony [info] {Doctrine_Connection_Mysql} query : SELECT u.id AS u__id, u.name AS u__name, u.login AS u__login, u.password AS u__password, u.mobile_number AS u__mobile_number, u.token AS u__token, u.number_of_trucks AS u__number_of_trucks FROM user u - ()
+Apr 30 12:51:57 symfony [info] {Doctrine_Connection_Mysql} query : SELECT u.id AS u__id, u.name AS u__name, u.login AS u__login, u.password AS u__password, u.mobile_number AS u__mobile_number, u.token AS u__token, u.number_of_trucks AS u__number_of_trucks FROM user u - ()
+Apr 30 12:51:57 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.name AS d__name, d.province_id AS d__province_id FROM district d - ()
+Apr 30 12:51:57 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.name AS d__name, d.province_id AS d__province_id FROM district d - ()
+Apr 30 12:51:57 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.name AS p__name FROM package p - ()
+Apr 30 12:51:57 symfony [info] {sfPHPView} Decorate content with "C:\dev\transzam\apps\frontend\templates/layout.php"
+Apr 30 12:51:57 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\templates/layout.php"
+Apr 30 12:51:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 30 12:51:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 12:51:57 symfony [info] {sfWebDebugLogger} Configuration 18.53 ms (9)
+Apr 30 12:51:57 symfony [info] {sfWebDebugLogger} Factories 51.91 ms (1)
+Apr 30 12:51:57 symfony [info] {sfWebDebugLogger} Action "load/edit" 129.63 ms (1)
+Apr 30 12:51:57 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.05 ms (7)
+Apr 30 12:51:57 symfony [info] {sfWebDebugLogger} View "Success" for "load/edit" 122.88 ms (1)
+Apr 30 12:51:57 symfony [info] {sfWebDebugLogger} Partial "load/_form" 90.72 ms (1)
+Apr 30 12:51:57 symfony [info] {sfWebResponse} Send content (76920 o)
+Apr 30 12:52:10 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /load with parameters array (  'module' => 'load',  'action' => 'index',)
+Apr 30 12:52:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 12:52:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 12:52:10 symfony [info] {loadActions} Call "loadActions->executeIndex()"
+Apr 30 12:52:10 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 12:52:10 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.id AS t__id, t.customer_id AS t__customer_id, t.transporter_id AS t__transporter_id, t.from_district AS t__from_district, t.to_district AS t__to_district, t.load_description AS t__load_description, t.package_id AS t__package_id, t.weight AS t__weight, t.arrive_before AS t__arrive_before, t.arrive_after AS t__arrive_after, t.expired_at AS t__expired_at, t.bid AS t__bid, t.comment AS t__comment, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM transport_load t - ()
+Apr 30 12:52:10 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\modules/load/templates/indexSuccess.php"
+Apr 30 12:52:10 symfony [info] {sfPHPView} Decorate content with "C:\dev\transzam\apps\frontend\templates/layout.php"
+Apr 30 12:52:10 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\templates/layout.php"
+Apr 30 12:52:10 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 30 12:52:10 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 12:52:10 symfony [info] {sfWebDebugLogger} Configuration 40.47 ms (9)
+Apr 30 12:52:10 symfony [info] {sfWebDebugLogger} Factories 108.47 ms (1)
+Apr 30 12:52:10 symfony [info] {sfWebDebugLogger} Action "load/index" 102.47 ms (1)
+Apr 30 12:52:10 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Apr 30 12:52:10 symfony [info] {sfWebDebugLogger} View "Success" for "load/index" 75.05 ms (1)
+Apr 30 12:52:10 symfony [info] {sfWebResponse} Send content (33850 o)
+Apr 30 13:43:51 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /transportload with parameters array (  'module' => 'transportload',  'action' => 'index',)
+Apr 30 13:43:51 symfony [info] {myUser} Automatic user logout due to timeout
+Apr 30 13:43:51 symfony [info] {myUser} User is not authenticated
+Apr 30 13:43:51 symfony [info] {sfFrontWebController} Action "transportload/index" does not exist
+Apr 30 13:43:51 symfony [err] {sfError404Exception} Action "transportload/index" does not exist.
+Apr 30 13:43:51 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 30 13:43:51 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 13:43:51 symfony [info] {sfWebDebugLogger} Configuration 20.29 ms (5)
+Apr 30 13:43:51 symfony [info] {sfWebDebugLogger} Factories 218.03 ms (1)
+Apr 30 13:44:01 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /load with parameters array (  'module' => 'load',  'action' => 'index',)
+Apr 30 13:44:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 13:44:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 13:44:01 symfony [info] {loadActions} Call "loadActions->executeIndex()"
+Apr 30 13:44:01 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 13:44:02 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.id AS t__id, t.customer_id AS t__customer_id, t.transporter_id AS t__transporter_id, t.from_district AS t__from_district, t.to_district AS t__to_district, t.load_description AS t__load_description, t.package_id AS t__package_id, t.weight AS t__weight, t.arrive_before AS t__arrive_before, t.arrive_after AS t__arrive_after, t.expired_at AS t__expired_at, t.bid AS t__bid, t.comment AS t__comment, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM transport_load t - ()
+Apr 30 13:44:02 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\modules/load/templates/indexSuccess.php"
+Apr 30 13:44:02 symfony [info] {sfPHPView} Decorate content with "C:\dev\transzam\apps\frontend\templates/layout.php"
+Apr 30 13:44:02 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\templates/layout.php"
+Apr 30 13:44:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 30 13:44:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 13:44:02 symfony [info] {sfWebDebugLogger} Configuration 20.47 ms (9)
+Apr 30 13:44:02 symfony [info] {sfWebDebugLogger} Factories 57.47 ms (1)
+Apr 30 13:44:02 symfony [info] {sfWebDebugLogger} Action "load/index" 361.69 ms (1)
+Apr 30 13:44:02 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+Apr 30 13:44:02 symfony [info] {sfWebDebugLogger} View "Success" for "load/index" 104.05 ms (1)
+Apr 30 13:44:02 symfony [info] {sfWebResponse} Send content (33849 o)
+Apr 30 13:44:05 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /load/show/id/1 with parameters array (  'module' => 'load',  'action' => 'show',  'id' => '1',)
+Apr 30 13:44:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 13:44:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 13:44:05 symfony [info] {loadActions} Call "loadActions->executeShow()"
+Apr 30 13:44:05 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 13:44:05 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.customer_id AS t__customer_id, t.transporter_id AS t__transporter_id, t.from_district AS t__from_district, t.to_district AS t__to_district, t.load_description AS t__load_description, t.package_id AS t__package_id, t.weight AS t__weight, t.arrive_before AS t__arrive_before, t.arrive_after AS t__arrive_after, t.expired_at AS t__expired_at, t.bid AS t__bid, t.comment AS t__comment, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM transport_load t WHERE (t.id = ?) LIMIT 1 - (1)
+Apr 30 13:44:05 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\modules/load/templates/showSuccess.php"
+Apr 30 13:44:05 symfony [info] {sfPHPView} Decorate content with "C:\dev\transzam\apps\frontend\templates/layout.php"
+Apr 30 13:44:05 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\templates/layout.php"
+Apr 30 13:44:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 30 13:44:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 13:44:05 symfony [info] {sfWebDebugLogger} Configuration 20.17 ms (9)
+Apr 30 13:44:05 symfony [info] {sfWebDebugLogger} Factories 48.23 ms (1)
+Apr 30 13:44:05 symfony [info] {sfWebDebugLogger} Action "load/show" 156.74 ms (1)
+Apr 30 13:44:05 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+Apr 30 13:44:05 symfony [info] {sfWebDebugLogger} View "Success" for "load/show" 47.43 ms (1)
+Apr 30 13:44:05 symfony [info] {sfWebResponse} Send content (34490 o)
+Apr 30 13:44:08 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /load/edit/id/1 with parameters array (  'module' => 'load',  'action' => 'edit',  'id' => '1',)
+Apr 30 13:44:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 13:44:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 13:44:09 symfony [info] {loadActions} Call "loadActions->executeEdit()"
+Apr 30 13:44:09 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 13:44:09 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.customer_id AS t__customer_id, t.transporter_id AS t__transporter_id, t.from_district AS t__from_district, t.to_district AS t__to_district, t.load_description AS t__load_description, t.package_id AS t__package_id, t.weight AS t__weight, t.arrive_before AS t__arrive_before, t.arrive_after AS t__arrive_after, t.expired_at AS t__expired_at, t.bid AS t__bid, t.comment AS t__comment, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM transport_load t WHERE (t.id = ?) LIMIT 1 - (1)
+Apr 30 13:44:09 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\modules/load/templates/editSuccess.php"
+Apr 30 13:44:09 symfony [info] {sfPartialView} Render "C:\dev\transzam\apps\frontend\modules/load/templates/_form.php"
+Apr 30 13:44:09 symfony [info] {Doctrine_Connection_Mysql} query : SELECT u.id AS u__id, u.name AS u__name, u.login AS u__login, u.password AS u__password, u.mobile_number AS u__mobile_number, u.token AS u__token, u.number_of_trucks AS u__number_of_trucks FROM user u - ()
+Apr 30 13:44:09 symfony [info] {Doctrine_Connection_Mysql} query : SELECT u.id AS u__id, u.name AS u__name, u.login AS u__login, u.password AS u__password, u.mobile_number AS u__mobile_number, u.token AS u__token, u.number_of_trucks AS u__number_of_trucks FROM user u - ()
+Apr 30 13:44:09 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.name AS d__name, d.province_id AS d__province_id FROM district d - ()
+Apr 30 13:44:09 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.name AS d__name, d.province_id AS d__province_id FROM district d - ()
+Apr 30 13:44:09 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.name AS p__name FROM package p - ()
+Apr 30 13:44:09 symfony [info] {sfPHPView} Decorate content with "C:\dev\transzam\apps\frontend\templates/layout.php"
+Apr 30 13:44:09 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\templates/layout.php"
+Apr 30 13:44:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 30 13:44:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 13:44:09 symfony [info] {sfWebDebugLogger} Configuration 20.86 ms (9)
+Apr 30 13:44:09 symfony [info] {sfWebDebugLogger} Factories 52.38 ms (1)
+Apr 30 13:44:09 symfony [info] {sfWebDebugLogger} Action "load/edit" 212.46 ms (1)
+Apr 30 13:44:09 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.05 ms (7)
+Apr 30 13:44:09 symfony [info] {sfWebDebugLogger} View "Success" for "load/edit" 251.06 ms (1)
+Apr 30 13:44:09 symfony [info] {sfWebDebugLogger} Partial "load/_form" 176.70 ms (1)
+Apr 30 13:44:09 symfony [info] {sfWebResponse} Send content (76920 o)
+Apr 30 18:47:22 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /load with parameters array (  'module' => 'load',  'action' => 'index',)
+Apr 30 18:47:22 symfony [info] {myUser} Automatic user logout due to timeout
+Apr 30 18:47:22 symfony [info] {myUser} User is not authenticated
+Apr 30 18:47:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 18:47:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 18:47:22 symfony [info] {loadActions} Call "loadActions->executeIndex()"
+Apr 30 18:47:22 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 18:47:22 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.id AS t__id, t.customer_id AS t__customer_id, t.transporter_id AS t__transporter_id, t.from_district AS t__from_district, t.to_district AS t__to_district, t.load_description AS t__load_description, t.package_id AS t__package_id, t.weight AS t__weight, t.arrive_before AS t__arrive_before, t.arrive_after AS t__arrive_after, t.expired_at AS t__expired_at, t.bid AS t__bid, t.comment AS t__comment, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM transport_load t - ()
+Apr 30 18:47:22 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\modules/load/templates/indexSuccess.php"
+Apr 30 18:47:22 symfony [info] {sfPHPView} Decorate content with "C:\dev\transzam\apps\frontend\templates/layout.php"
+Apr 30 18:47:22 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\templates/layout.php"
+Apr 30 18:47:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 30 18:47:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 18:47:22 symfony [info] {sfWebDebugLogger} Configuration 22.39 ms (9)
+Apr 30 18:47:22 symfony [info] {sfWebDebugLogger} Factories 51.52 ms (1)
+Apr 30 18:47:22 symfony [info] {sfWebDebugLogger} Action "load/index" 156.55 ms (1)
+Apr 30 18:47:22 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+Apr 30 18:47:22 symfony [info] {sfWebDebugLogger} View "Success" for "load/index" 33.85 ms (1)
+Apr 30 18:47:22 symfony [info] {sfWebResponse} Send content (34575 o)
+Apr 30 18:47:27 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /load/new with parameters array (  'module' => 'load',  'action' => 'new',)
+Apr 30 18:47:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 18:47:27 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 18:47:27 symfony [info] {loadActions} Call "loadActions->executeNew()"
+Apr 30 18:47:27 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\modules/load/templates/newSuccess.php"
+Apr 30 18:47:27 symfony [info] {sfPartialView} Render "C:\dev\transzam\apps\frontend\modules/load/templates/_form.php"
+Apr 30 18:47:27 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 18:47:27 symfony [info] {Doctrine_Connection_Mysql} query : SELECT u.id AS u__id, u.name AS u__name, u.login AS u__login, u.password AS u__password, u.mobile_number AS u__mobile_number, u.token AS u__token, u.number_of_trucks AS u__number_of_trucks FROM user u - ()
+Apr 30 18:47:27 symfony [info] {Doctrine_Connection_Mysql} query : SELECT u.id AS u__id, u.name AS u__name, u.login AS u__login, u.password AS u__password, u.mobile_number AS u__mobile_number, u.token AS u__token, u.number_of_trucks AS u__number_of_trucks FROM user u - ()
+Apr 30 18:47:27 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.name AS d__name, d.province_id AS d__province_id FROM district d - ()
+Apr 30 18:47:27 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.name AS d__name, d.province_id AS d__province_id FROM district d - ()
+Apr 30 18:47:27 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.name AS p__name FROM package p - ()
+Apr 30 18:47:27 symfony [info] {sfPHPView} Decorate content with "C:\dev\transzam\apps\frontend\templates/layout.php"
+Apr 30 18:47:27 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\templates/layout.php"
+Apr 30 18:47:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 30 18:47:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 18:47:27 symfony [info] {sfWebDebugLogger} Configuration 23.20 ms (9)
+Apr 30 18:47:27 symfony [info] {sfWebDebugLogger} Factories 54.16 ms (1)
+Apr 30 18:47:27 symfony [info] {sfWebDebugLogger} Action "load/new" 75.53 ms (1)
+Apr 30 18:47:27 symfony [info] {sfWebDebugLogger} View "Success" for "load/new" 175.66 ms (1)
+Apr 30 18:47:27 symfony [info] {sfWebDebugLogger} Partial "load/_form" 140.08 ms (1)
+Apr 30 18:47:27 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (6)
+Apr 30 18:47:27 symfony [info] {sfWebResponse} Send content (73508 o)
+May 01 17:00:24 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /load with parameters array (  'module' => 'load',  'action' => 'index',)
+May 01 17:00:24 symfony [info] {myUser} Automatic user logout due to timeout
+May 01 17:00:24 symfony [info] {myUser} User is not authenticated
+May 01 17:00:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 01 17:00:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 01 17:00:25 symfony [info] {loadActions} Call "loadActions->executeIndex()"
+May 01 17:00:25 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 01 17:00:25 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.id AS t__id, t.customer_id AS t__customer_id, t.transporter_id AS t__transporter_id, t.from_district AS t__from_district, t.to_district AS t__to_district, t.load_description AS t__load_description, t.package_id AS t__package_id, t.weight AS t__weight, t.arrive_before AS t__arrive_before, t.arrive_after AS t__arrive_after, t.expired_at AS t__expired_at, t.bid AS t__bid, t.comment AS t__comment, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM transport_load t - ()
+May 01 17:00:25 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[42S02]: Base table or view not found: 1146 Table 'transzam.transport_load' doesn't exist. Failing Query: "SELECT t.id AS t__id, t.customer_id AS t__customer_id, t.transporter_id AS t__transporter_id, t.from_district AS t__from_district, t.to_district AS t__to_district, t.load_description AS t__load_description, t.package_id AS t__package_id, t.weight AS t__weight, t.arrive_before AS t__arrive_before, t.arrive_after AS t__arrive_after, t.expired_at AS t__expired_at, t.bid AS t__bid, t.comment AS t__comment, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM transport_load t"
+May 01 17:00:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 01 17:00:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 01 17:00:26 symfony [info] {sfWebDebugLogger} Configuration 42.02 ms (8)
+May 01 17:00:26 symfony [info] {sfWebDebugLogger} Factories 809.35 ms (1)
+May 01 17:00:26 symfony [info] {sfWebDebugLogger} Action "load/index" 1025.73 ms (1)
+May 01 17:00:26 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (1)
+May 01 17:31:16 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /load with parameters array (  'module' => 'load',  'action' => 'index',)
+May 01 17:31:16 symfony [info] {myUser} Automatic user logout due to timeout
+May 01 17:31:16 symfony [info] {myUser} User is not authenticated
+May 01 17:31:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 01 17:31:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 01 17:31:16 symfony [info] {loadActions} Call "loadActions->executeIndex()"
+May 01 17:31:16 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 01 17:31:16 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.id AS t__id, t.customer_id AS t__customer_id, t.transporter_id AS t__transporter_id, t.from_district AS t__from_district, t.to_district AS t__to_district, t.load_description AS t__load_description, t.package_id AS t__package_id, t.weight AS t__weight, t.arrive_before AS t__arrive_before, t.arrive_after AS t__arrive_after, t.expired_at AS t__expired_at, t.bid AS t__bid, t.comment AS t__comment, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM transport_load t - ()
+May 01 17:31:17 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\modules/load/templates/indexSuccess.php"
+May 01 17:31:17 symfony [info] {sfPHPView} Decorate content with "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:31:17 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:31:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 01 17:31:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 01 17:31:17 symfony [info] {sfWebDebugLogger} Configuration 28.15 ms (9)
+May 01 17:31:17 symfony [info] {sfWebDebugLogger} Factories 53.43 ms (1)
+May 01 17:31:17 symfony [info] {sfWebDebugLogger} Action "load/index" 278.71 ms (1)
+May 01 17:31:17 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+May 01 17:31:17 symfony [info] {sfWebDebugLogger} View "Success" for "load/index" 317.07 ms (1)
+May 01 17:31:17 symfony [info] {sfWebResponse} Send content (34126 o)
+May 01 17:39:08 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /load with parameters array (  'module' => 'load',  'action' => 'index',)
+May 01 17:39:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 01 17:39:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 01 17:39:09 symfony [info] {loadActions} Call "loadActions->executeIndex()"
+May 01 17:39:09 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 01 17:39:09 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.id AS t__id, t.customer_id AS t__customer_id, t.transporter_id AS t__transporter_id, t.from_district AS t__from_district, t.to_district AS t__to_district, t.load_description AS t__load_description, t.package_id AS t__package_id, t.weight AS t__weight, t.arrive_before AS t__arrive_before, t.arrive_after AS t__arrive_after, t.expired_at AS t__expired_at, t.bid AS t__bid, t.comment AS t__comment, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM transport_load t - ()
+May 01 17:39:09 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\modules/load/templates/indexSuccess.php"
+May 01 17:39:09 symfony [info] {sfPHPView} Decorate content with "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:39:09 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:39:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 01 17:39:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 01 17:39:09 symfony [info] {sfWebDebugLogger} Configuration 32.19 ms (9)
+May 01 17:39:09 symfony [info] {sfWebDebugLogger} Factories 54.94 ms (1)
+May 01 17:39:09 symfony [info] {sfWebDebugLogger} Action "load/index" 102.64 ms (1)
+May 01 17:39:09 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+May 01 17:39:09 symfony [info] {sfWebDebugLogger} View "Success" for "load/index" 54.63 ms (1)
+May 01 17:39:09 symfony [info] {sfWebResponse} Send content (33848 o)
+May 01 17:39:37 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /load/show/id/1 with parameters array (  'module' => 'load',  'action' => 'show',  'id' => '1',)
+May 01 17:39:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 01 17:39:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 01 17:39:37 symfony [info] {loadActions} Call "loadActions->executeShow()"
+May 01 17:39:37 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 01 17:39:37 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.customer_id AS t__customer_id, t.transporter_id AS t__transporter_id, t.from_district AS t__from_district, t.to_district AS t__to_district, t.load_description AS t__load_description, t.package_id AS t__package_id, t.weight AS t__weight, t.arrive_before AS t__arrive_before, t.arrive_after AS t__arrive_after, t.expired_at AS t__expired_at, t.bid AS t__bid, t.comment AS t__comment, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM transport_load t WHERE (t.id = ?) LIMIT 1 - (1)
+May 01 17:39:37 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\modules/load/templates/showSuccess.php"
+May 01 17:39:37 symfony [info] {sfPHPView} Decorate content with "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:39:37 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:39:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 01 17:39:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 01 17:39:37 symfony [info] {sfWebDebugLogger} Configuration 21.40 ms (9)
+May 01 17:39:37 symfony [info] {sfWebDebugLogger} Factories 77.58 ms (1)
+May 01 17:39:37 symfony [info] {sfWebDebugLogger} Action "load/show" 284.77 ms (1)
+May 01 17:39:37 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+May 01 17:39:37 symfony [info] {sfWebDebugLogger} View "Success" for "load/show" 50.77 ms (1)
+May 01 17:39:37 symfony [info] {sfWebResponse} Send content (34488 o)
+May 01 17:39:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /load/edit/id/1 with parameters array (  'module' => 'load',  'action' => 'edit',  'id' => '1',)
+May 01 17:39:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 01 17:39:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 01 17:39:44 symfony [info] {loadActions} Call "loadActions->executeEdit()"
+May 01 17:39:44 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 01 17:39:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.customer_id AS t__customer_id, t.transporter_id AS t__transporter_id, t.from_district AS t__from_district, t.to_district AS t__to_district, t.load_description AS t__load_description, t.package_id AS t__package_id, t.weight AS t__weight, t.arrive_before AS t__arrive_before, t.arrive_after AS t__arrive_after, t.expired_at AS t__expired_at, t.bid AS t__bid, t.comment AS t__comment, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM transport_load t WHERE (t.id = ?) LIMIT 1 - (1)
+May 01 17:39:44 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\modules/load/templates/editSuccess.php"
+May 01 17:39:44 symfony [info] {sfPartialView} Render "C:\dev\transzam\apps\frontend\modules/load/templates/_form.php"
+May 01 17:39:44 symfony [info] {Doctrine_Connection_Mysql} query : SELECT u.id AS u__id, u.name AS u__name, u.login AS u__login, u.password AS u__password, u.mobile_number AS u__mobile_number, u.token AS u__token, u.user_type AS u__user_type, u.number_of_trucks AS u__number_of_trucks FROM user u WHERE (u.user_type = 'customer') - ()
+May 01 17:39:44 symfony [info] {Doctrine_Connection_Mysql} query : SELECT u.id AS u__id, u.name AS u__name, u.login AS u__login, u.password AS u__password, u.mobile_number AS u__mobile_number, u.token AS u__token, u.user_type AS u__user_type, u.number_of_trucks AS u__number_of_trucks FROM user u WHERE (u.user_type = 'transporter') - ()
+May 01 17:39:44 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.name AS d__name, d.province_id AS d__province_id FROM district d - ()
+May 01 17:39:44 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.name AS d__name, d.province_id AS d__province_id FROM district d - ()
+May 01 17:39:44 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.name AS p__name FROM package p - ()
+May 01 17:39:45 symfony [info] {sfPHPView} Decorate content with "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:39:45 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:39:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 01 17:39:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 01 17:39:45 symfony [info] {sfWebDebugLogger} Configuration 14.41 ms (9)
+May 01 17:39:45 symfony [info] {sfWebDebugLogger} Factories 53.26 ms (1)
+May 01 17:39:45 symfony [info] {sfWebDebugLogger} Action "load/edit" 146.90 ms (1)
+May 01 17:39:45 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.05 ms (7)
+May 01 17:39:45 symfony [info] {sfWebDebugLogger} View "Success" for "load/edit" 428.21 ms (1)
+May 01 17:39:45 symfony [info] {sfWebDebugLogger} Partial "load/_form" 344.03 ms (1)
+May 01 17:39:45 symfony [info] {sfWebResponse} Send content (77444 o)
+May 01 17:39:56 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /load with parameters array (  'module' => 'load',  'action' => 'index',)
+May 01 17:39:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 01 17:39:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 01 17:39:56 symfony [info] {loadActions} Call "loadActions->executeIndex()"
+May 01 17:39:56 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 01 17:39:56 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.id AS t__id, t.customer_id AS t__customer_id, t.transporter_id AS t__transporter_id, t.from_district AS t__from_district, t.to_district AS t__to_district, t.load_description AS t__load_description, t.package_id AS t__package_id, t.weight AS t__weight, t.arrive_before AS t__arrive_before, t.arrive_after AS t__arrive_after, t.expired_at AS t__expired_at, t.bid AS t__bid, t.comment AS t__comment, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM transport_load t - ()
+May 01 17:39:56 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\modules/load/templates/indexSuccess.php"
+May 01 17:39:56 symfony [info] {sfPHPView} Decorate content with "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:39:56 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:39:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 01 17:39:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 01 17:39:56 symfony [info] {sfWebDebugLogger} Configuration 22.20 ms (9)
+May 01 17:39:56 symfony [info] {sfWebDebugLogger} Factories 112.82 ms (1)
+May 01 17:39:56 symfony [info] {sfWebDebugLogger} Action "load/index" 94.36 ms (1)
+May 01 17:39:56 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+May 01 17:39:56 symfony [info] {sfWebDebugLogger} View "Success" for "load/index" 71.27 ms (1)
+May 01 17:39:56 symfony [info] {sfWebResponse} Send content (33848 o)
+May 01 17:39:58 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /load/new with parameters array (  'module' => 'load',  'action' => 'new',)
+May 01 17:39:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 01 17:39:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 01 17:39:58 symfony [info] {loadActions} Call "loadActions->executeNew()"
+May 01 17:39:59 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\modules/load/templates/newSuccess.php"
+May 01 17:39:59 symfony [info] {sfPartialView} Render "C:\dev\transzam\apps\frontend\modules/load/templates/_form.php"
+May 01 17:39:59 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 01 17:39:59 symfony [info] {Doctrine_Connection_Mysql} query : SELECT u.id AS u__id, u.name AS u__name, u.login AS u__login, u.password AS u__password, u.mobile_number AS u__mobile_number, u.token AS u__token, u.user_type AS u__user_type, u.number_of_trucks AS u__number_of_trucks FROM user u WHERE (u.user_type = 'customer') - ()
+May 01 17:39:59 symfony [info] {Doctrine_Connection_Mysql} query : SELECT u.id AS u__id, u.name AS u__name, u.login AS u__login, u.password AS u__password, u.mobile_number AS u__mobile_number, u.token AS u__token, u.user_type AS u__user_type, u.number_of_trucks AS u__number_of_trucks FROM user u WHERE (u.user_type = 'transporter') - ()
+May 01 17:39:59 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.name AS d__name, d.province_id AS d__province_id FROM district d - ()
+May 01 17:39:59 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.name AS d__name, d.province_id AS d__province_id FROM district d - ()
+May 01 17:39:59 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.name AS p__name FROM package p - ()
+May 01 17:39:59 symfony [info] {sfPHPView} Decorate content with "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:39:59 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:39:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 01 17:39:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 01 17:39:59 symfony [info] {sfWebDebugLogger} Configuration 17.51 ms (9)
+May 01 17:39:59 symfony [info] {sfWebDebugLogger} Factories 54.24 ms (1)
+May 01 17:39:59 symfony [info] {sfWebDebugLogger} Action "load/new" 130.80 ms (1)
+May 01 17:39:59 symfony [info] {sfWebDebugLogger} View "Success" for "load/new" 165.64 ms (1)
+May 01 17:39:59 symfony [info] {sfWebDebugLogger} Partial "load/_form" 136.54 ms (1)
+May 01 17:39:59 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (6)
+May 01 17:39:59 symfony [info] {sfWebResponse} Send content (73282 o)
+May 01 17:42:25 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /customer/new with parameters array (  'module' => 'customer',  'action' => 'new',)
+May 01 17:42:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 01 17:42:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 01 17:42:25 symfony [info] {customerActions} Call "customerActions->executeNew()"
+May 01 17:42:25 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\modules/customer/templates/newSuccess.php"
+May 01 17:42:25 symfony [info] {sfPartialView} Render "C:\dev\transzam\apps\frontend\modules/customer/templates/_form.php"
+May 01 17:42:25 symfony [info] {sfPHPView} Decorate content with "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:42:25 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:42:25 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 01 17:42:25 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 01 17:42:25 symfony [info] {sfWebDebugLogger} Configuration 230.48 ms (10)
+May 01 17:42:25 symfony [info] {sfWebDebugLogger} Factories 73.24 ms (1)
+May 01 17:42:25 symfony [info] {sfWebDebugLogger} Action "customer/new" 53.05 ms (1)
+May 01 17:42:25 symfony [info] {sfWebDebugLogger} View "Success" for "customer/new" 133.92 ms (1)
+May 01 17:42:25 symfony [info] {sfWebDebugLogger} Partial "customer/_form" 69.68 ms (1)
+May 01 17:42:25 symfony [info] {sfWebResponse} Send content (35406 o)
+May 01 17:43:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /customer/create with parameters array (  'module' => 'customer',  'action' => 'create',)
+May 01 17:43:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 01 17:43:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 01 17:43:44 symfony [info] {customerActions} Call "customerActions->executeCreate()"
+May 01 17:43:44 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 01 17:43:44 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO user (name, login, password, token, user_type, number_of_trucks) VALUES (?, ?, ?, ?, ?, ?) - (pietje bell, bell, mYsECRET, , Customer, 50)
+May 01 17:43:44 symfony [info] {sfFrontWebController} Redirect to "http://localhost/transzam/frontend_dev.php/customer/edit/id/5"
+May 01 17:43:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 01 17:43:44 symfony [info] {sfWebResponse} Send header "Location: http://localhost/transzam/frontend_dev.php/customer/edit/id/5"
+May 01 17:43:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 01 17:43:44 symfony [info] {sfWebDebugLogger} Configuration 18.99 ms (8)
+May 01 17:43:44 symfony [info] {sfWebDebugLogger} Factories 50.42 ms (1)
+May 01 17:43:44 symfony [info] {sfWebDebugLogger} Action "customer/create" 72.61 ms (1)
+May 01 17:43:44 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+May 01 17:43:44 symfony [info] {sfWebResponse} Send content (132 o)
+May 01 17:43:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /customer/edit/id/5 with parameters array (  'module' => 'customer',  'action' => 'edit',  'id' => '5',)
+May 01 17:43:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 01 17:43:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 01 17:43:44 symfony [info] {customerActions} Call "customerActions->executeEdit()"
+May 01 17:43:44 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 01 17:43:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.name AS u__name, u.login AS u__login, u.password AS u__password, u.mobile_number AS u__mobile_number, u.token AS u__token, u.user_type AS u__user_type, u.number_of_trucks AS u__number_of_trucks FROM user u WHERE (u.id = ? AND (u.user_type = 'customer')) LIMIT 1 - (5)
+May 01 17:43:45 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\modules/customer/templates/editSuccess.php"
+May 01 17:43:45 symfony [info] {sfPartialView} Render "C:\dev\transzam\apps\frontend\modules/customer/templates/_form.php"
+May 01 17:43:45 symfony [info] {sfPHPView} Decorate content with "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:43:45 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:43:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 01 17:43:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 01 17:43:45 symfony [info] {sfWebDebugLogger} Configuration 17.94 ms (9)
+May 01 17:43:45 symfony [info] {sfWebDebugLogger} Factories 40.21 ms (1)
+May 01 17:43:45 symfony [info] {sfWebDebugLogger} Action "customer/edit" 87.96 ms (1)
+May 01 17:43:45 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+May 01 17:43:45 symfony [info] {sfWebDebugLogger} View "Success" for "customer/edit" 38.88 ms (1)
+May 01 17:43:45 symfony [info] {sfWebDebugLogger} Partial "customer/_form" 10.73 ms (1)
+May 01 17:43:45 symfony [info] {sfWebResponse} Send content (39987 o)
+May 01 17:49:22 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /user/new with parameters array (  'module' => 'user',  'action' => 'new',)
+May 01 17:49:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 01 17:49:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 01 17:49:22 symfony [info] {userActions} Call "userActions->executeNew()"
+May 01 17:49:22 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\modules/user/templates/newSuccess.php"
+May 01 17:49:22 symfony [info] {sfPartialView} Render "C:\dev\transzam\apps\frontend\modules/user/templates/_form.php"
+May 01 17:49:22 symfony [info] {sfPHPView} Decorate content with "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:49:22 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:49:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 01 17:49:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 01 17:49:22 symfony [info] {sfWebDebugLogger} Configuration 94.10 ms (10)
+May 01 17:49:22 symfony [info] {sfWebDebugLogger} Factories 58.33 ms (1)
+May 01 17:49:22 symfony [info] {sfWebDebugLogger} Action "user/new" 56.23 ms (1)
+May 01 17:49:22 symfony [info] {sfWebDebugLogger} View "Success" for "user/new" 65.68 ms (1)
+May 01 17:49:22 symfony [info] {sfWebDebugLogger} Partial "user/_form" 10.00 ms (1)
+May 01 17:49:22 symfony [info] {sfWebResponse} Send content (35180 o)
+May 01 17:49:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /user/create with parameters array (  'module' => 'user',  'action' => 'create',)
+May 01 17:49:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 01 17:49:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 01 17:49:44 symfony [info] {userActions} Call "userActions->executeCreate()"
+May 01 17:49:44 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 01 17:49:44 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO user (name, login, password, token, user_type) VALUES (?, ?, ?, ?, ?) - (pietje bell, bell, mYsECRET, , )
+May 01 17:49:44 symfony [info] {sfFrontWebController} Redirect to "http://localhost/transzam/frontend_dev.php/user/edit/id/6"
+May 01 17:49:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 01 17:49:44 symfony [info] {sfWebResponse} Send header "Location: http://localhost/transzam/frontend_dev.php/user/edit/id/6"
+May 01 17:49:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 01 17:49:44 symfony [info] {sfWebDebugLogger} Configuration 18.90 ms (8)
+May 01 17:49:44 symfony [info] {sfWebDebugLogger} Factories 53.53 ms (1)
+May 01 17:49:44 symfony [info] {sfWebDebugLogger} Action "user/create" 68.27 ms (1)
+May 01 17:49:44 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+May 01 17:49:44 symfony [info] {sfWebResponse} Send content (128 o)
+May 01 17:49:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /user/edit/id/6 with parameters array (  'module' => 'user',  'action' => 'edit',  'id' => '6',)
+May 01 17:49:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 01 17:49:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 01 17:49:44 symfony [info] {userActions} Call "userActions->executeEdit()"
+May 01 17:49:44 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 01 17:49:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.name AS u__name, u.login AS u__login, u.password AS u__password, u.mobile_number AS u__mobile_number, u.token AS u__token, u.user_type AS u__user_type, u.number_of_trucks AS u__number_of_trucks FROM user u WHERE (u.id = ?) LIMIT 1 - (6)
+May 01 17:49:44 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\modules/user/templates/editSuccess.php"
+May 01 17:49:44 symfony [info] {sfPartialView} Render "C:\dev\transzam\apps\frontend\modules/user/templates/_form.php"
+May 01 17:49:44 symfony [info] {sfPHPView} Decorate content with "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:49:44 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:49:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 01 17:49:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 01 17:49:44 symfony [info] {sfWebDebugLogger} Configuration 11.43 ms (9)
+May 01 17:49:44 symfony [info] {sfWebDebugLogger} Factories 42.10 ms (1)
+May 01 17:49:44 symfony [info] {sfWebDebugLogger} Action "user/edit" 129.10 ms (1)
+May 01 17:49:44 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+May 01 17:49:44 symfony [info] {sfWebDebugLogger} View "Success" for "user/edit" 75.32 ms (1)
+May 01 17:49:44 symfony [info] {sfWebDebugLogger} Partial "user/_form" 49.02 ms (1)
+May 01 17:49:44 symfony [info] {sfWebResponse} Send content (39660 o)
+May 01 17:49:47 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /user with parameters array (  'module' => 'user',  'action' => 'index',)
+May 01 17:49:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 01 17:49:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 01 17:49:47 symfony [info] {userActions} Call "userActions->executeIndex()"
+May 01 17:49:47 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 01 17:49:47 symfony [info] {Doctrine_Connection_Mysql} query : SELECT u.id AS u__id, u.name AS u__name, u.login AS u__login, u.password AS u__password, u.mobile_number AS u__mobile_number, u.token AS u__token, u.user_type AS u__user_type, u.number_of_trucks AS u__number_of_trucks FROM user u - ()
+May 01 17:49:47 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\modules/user/templates/indexSuccess.php"
+May 01 17:49:47 symfony [info] {sfPHPView} Decorate content with "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:49:47 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:49:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 01 17:49:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 01 17:49:47 symfony [info] {sfWebDebugLogger} Configuration 25.77 ms (9)
+May 01 17:49:47 symfony [info] {sfWebDebugLogger} Factories 69.92 ms (1)
+May 01 17:49:47 symfony [info] {sfWebDebugLogger} Action "user/index" 122.55 ms (1)
+May 01 17:49:47 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+May 01 17:49:47 symfony [info] {sfWebDebugLogger} View "Success" for "user/index" 39.01 ms (1)
+May 01 17:49:47 symfony [info] {sfWebResponse} Send content (33580 o)
+May 01 17:50:00 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /customer with parameters array (  'module' => 'customer',  'action' => 'index',)
+May 01 17:50:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 01 17:50:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 01 17:50:00 symfony [info] {customerActions} Call "customerActions->executeIndex()"
+May 01 17:50:00 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 01 17:50:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT u.id AS u__id, u.name AS u__name, u.login AS u__login, u.password AS u__password, u.mobile_number AS u__mobile_number, u.token AS u__token, u.user_type AS u__user_type, u.number_of_trucks AS u__number_of_trucks FROM user u WHERE (u.user_type = 'customer') - ()
+May 01 17:50:00 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\modules/customer/templates/indexSuccess.php"
+May 01 17:50:00 symfony [info] {sfPHPView} Decorate content with "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:50:00 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:50:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 01 17:50:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 01 17:50:00 symfony [info] {sfWebDebugLogger} Configuration 18.64 ms (9)
+May 01 17:50:00 symfony [info] {sfWebDebugLogger} Factories 53.24 ms (1)
+May 01 17:50:00 symfony [info] {sfWebDebugLogger} Action "customer/index" 64.62 ms (1)
+May 01 17:50:00 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+May 01 17:50:00 symfony [info] {sfWebDebugLogger} View "Success" for "customer/index" 34.26 ms (1)
+May 01 17:50:00 symfony [info] {sfWebResponse} Send content (32895 o)
+May 01 17:50:18 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /load with parameters array (  'module' => 'load',  'action' => 'index',)
+May 01 17:50:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 01 17:50:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 01 17:50:18 symfony [info] {loadActions} Call "loadActions->executeIndex()"
+May 01 17:50:18 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 01 17:50:18 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.id AS t__id, t.customer_id AS t__customer_id, t.transporter_id AS t__transporter_id, t.from_district AS t__from_district, t.to_district AS t__to_district, t.load_description AS t__load_description, t.package_id AS t__package_id, t.weight AS t__weight, t.arrive_before AS t__arrive_before, t.arrive_after AS t__arrive_after, t.expired_at AS t__expired_at, t.bid AS t__bid, t.comment AS t__comment, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM transport_load t - ()
+May 01 17:50:18 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\modules/load/templates/indexSuccess.php"
+May 01 17:50:18 symfony [info] {sfPHPView} Decorate content with "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:50:18 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:50:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 01 17:50:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 01 17:50:18 symfony [info] {sfWebDebugLogger} Configuration 22.34 ms (9)
+May 01 17:50:18 symfony [info] {sfWebDebugLogger} Factories 56.73 ms (1)
+May 01 17:50:18 symfony [info] {sfWebDebugLogger} Action "load/index" 68.40 ms (1)
+May 01 17:50:18 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+May 01 17:50:18 symfony [info] {sfWebDebugLogger} View "Success" for "load/index" 28.39 ms (1)
+May 01 17:50:18 symfony [info] {sfWebResponse} Send content (33847 o)
+May 01 17:50:21 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /load/new with parameters array (  'module' => 'load',  'action' => 'new',)
+May 01 17:50:21 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 01 17:50:21 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 01 17:50:21 symfony [info] {loadActions} Call "loadActions->executeNew()"
+May 01 17:50:21 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\modules/load/templates/newSuccess.php"
+May 01 17:50:21 symfony [info] {sfPartialView} Render "C:\dev\transzam\apps\frontend\modules/load/templates/_form.php"
+May 01 17:50:21 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 01 17:50:21 symfony [info] {Doctrine_Connection_Mysql} query : SELECT u.id AS u__id, u.name AS u__name, u.login AS u__login, u.password AS u__password, u.mobile_number AS u__mobile_number, u.token AS u__token, u.user_type AS u__user_type, u.number_of_trucks AS u__number_of_trucks FROM user u WHERE (u.user_type = 'customer') - ()
+May 01 17:50:21 symfony [info] {Doctrine_Connection_Mysql} query : SELECT u.id AS u__id, u.name AS u__name, u.login AS u__login, u.password AS u__password, u.mobile_number AS u__mobile_number, u.token AS u__token, u.user_type AS u__user_type, u.number_of_trucks AS u__number_of_trucks FROM user u WHERE (u.user_type = 'transporter') - ()
+May 01 17:50:21 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.name AS d__name, d.province_id AS d__province_id FROM district d - ()
+May 01 17:50:21 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.name AS d__name, d.province_id AS d__province_id FROM district d - ()
+May 01 17:50:21 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.name AS p__name FROM package p - ()
+May 01 17:50:21 symfony [info] {sfPHPView} Decorate content with "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:50:21 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:50:21 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 01 17:50:21 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 01 17:50:21 symfony [info] {sfWebDebugLogger} Configuration 13.98 ms (9)
+May 01 17:50:21 symfony [info] {sfWebDebugLogger} Factories 44.80 ms (1)
+May 01 17:50:21 symfony [info] {sfWebDebugLogger} Action "load/new" 69.05 ms (1)
+May 01 17:50:21 symfony [info] {sfWebDebugLogger} View "Success" for "load/new" 129.14 ms (1)
+May 01 17:50:21 symfony [info] {sfWebDebugLogger} Partial "load/_form" 108.16 ms (1)
+May 01 17:50:21 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (6)
+May 01 17:50:21 symfony [info] {sfWebResponse} Send content (73320 o)
+May 01 17:50:55 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /customer with parameters array (  'module' => 'customer',  'action' => 'index',)
+May 01 17:50:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 01 17:50:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 01 17:50:55 symfony [info] {customerActions} Call "customerActions->executeIndex()"
+May 01 17:50:55 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 01 17:50:55 symfony [info] {Doctrine_Connection_Mysql} query : SELECT u.id AS u__id, u.name AS u__name, u.login AS u__login, u.password AS u__password, u.mobile_number AS u__mobile_number, u.token AS u__token, u.user_type AS u__user_type, u.number_of_trucks AS u__number_of_trucks FROM user u WHERE (u.user_type = 'customer') - ()
+May 01 17:50:55 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\modules/customer/templates/indexSuccess.php"
+May 01 17:50:55 symfony [info] {sfPHPView} Decorate content with "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:50:55 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:50:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 01 17:50:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 01 17:50:55 symfony [info] {sfWebDebugLogger} Configuration 14.49 ms (9)
+May 01 17:50:55 symfony [info] {sfWebDebugLogger} Factories 47.09 ms (1)
+May 01 17:50:55 symfony [info] {sfWebDebugLogger} Action "customer/index" 69.23 ms (1)
+May 01 17:50:55 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+May 01 17:50:55 symfony [info] {sfWebDebugLogger} View "Success" for "customer/index" 28.93 ms (1)
+May 01 17:50:55 symfony [info] {sfWebResponse} Send content (32895 o)
+May 01 17:50:59 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /customer/new with parameters array (  'module' => 'customer',  'action' => 'new',)
+May 01 17:50:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 01 17:50:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 01 17:50:59 symfony [info] {customerActions} Call "customerActions->executeNew()"
+May 01 17:50:59 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\modules/customer/templates/newSuccess.php"
+May 01 17:50:59 symfony [info] {sfPartialView} Render "C:\dev\transzam\apps\frontend\modules/customer/templates/_form.php"
+May 01 17:50:59 symfony [info] {sfPHPView} Decorate content with "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:50:59 symfony [info] {sfPHPView} Render "C:\dev\transzam\apps\frontend\templates/layout.php"
+May 01 17:50:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 01 17:50:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 01 17:50:59 symfony [info] {sfWebDebugLogger} Configuration 23.18 ms (9)
+May 01 17:50:59 symfony [info] {sfWebDebugLogger} Factories 59.55 ms (1)
+May 01 17:50:59 symfony [info] {sfWebDebugLogger} Action "customer/new" 60.09 ms (1)
+May 01 17:50:59 symfony [info] {sfWebDebugLogger} View "Success" for "customer/new" 36.04 ms (1)
+May 01 17:50:59 symfony [info] {sfWebDebugLogger} Partial "customer/_form" 10.07 ms (1)
+May 01 17:50:59 symfony [info] {sfWebResponse} Send content (35402 o)
+May 01 17:51:37 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+May 02 22:11:46 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+May 04 10:33:16 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+May 04 10:33:16 symfony [warning] {sfWebDebugLogger}  Warning at C:\dev\transzam_copy2\cache\frontend\dev\config\config_core_compile.yml.php on line 95 (require(C:/dev/transzam - Copy (2)/apps/frontend/lib/myUser.class.php): failed to open stream: No such file or directory)

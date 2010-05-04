@@ -18,34 +18,51 @@ District:
    province_id: { type: integer, notnull: true }
 
 # TranszamUser describes the userdetails
+
+# User
 User:
   columns:
-    name: { type: string(255) }
-    login: { name: login as username, type: string(255) }
-# Checken op 097
-    password: { type: string(255) }
-    mobile_number: { type: integer }
+    sf_guard_user_id: { type : integer(4) }
+    company: { type: string(255) }
+    district_id: { type: integer }
+    address: { type: string(255) }
+    email_address: { type: string(255) }
+    tel: { type: string(255) }
+    cell: { type: string(255) }
+    comment: { type: string(255) }
+    # Two additional "login" names.
+    sms_number: { type: integer }
     token: { type: string(255) }
-
-# TanszamCustomer describes the customer
-# TODO: options to make a concrete extension? This is to create easier and more efficient queries
-Customer:
-  inheritance:
-    extends: User
-    type: column_aggregation
-    keyField: user_type
-    keyValue: customer
-  columns:
-    number_of_trucks: { type: integer }
+  relations:
+    GuardUser:
+        class: sfGuardUser
+        foreignType: one
+# Deze foreign relatie wordt automatisch gelegd!
+#    InDistrict:
+#       class: District
+#       onDelete: CASCADE # Lijkt me  niet juist. een district staat toch op zichzelf?
+#       local: district_id
+#       foreign: id
 
 # TranszamTransporter describes the transporter
-# TODO: options to make a concrete extension? This to create easier and more efficient queries
 Transporter:
   inheritance:
     extends: User
     type: column_aggregation
     keyField: user_type
     keyValue: transporter
+  columns:
+    number_of_trucks : { type : integer }
+
+# TanszamCustomer describes the customer
+Customer:
+  inheritance:
+    extends : User
+    type: column_aggregation
+    keyField : user_type
+    keyValue : customer
+  columns:
+    business: { type : string(255) }
 
 # TranszamTransportLoad has loads from the customer to the transporter.
 TransportLoad:
@@ -68,9 +85,7 @@ TransportLoad:
         class: District
         local: from_district
         foreign: id
-        foreignAlias: FromDistricts
       ToDistrict:
         class: District
         local: to_district
         foreign: id
-        foreignAlias: ToDistricts
