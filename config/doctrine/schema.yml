@@ -81,7 +81,7 @@ TransportLoad:
     bid: { type: enum, length: 9, values: [ 'Open', 'Taken', 'Cancelled' ], default: 'Open' }
     comment: { type: string(255) }
   relations:
-      FromDistrict:
+      FromDistrict: 
         class: District
         local: from_district
         foreign: id

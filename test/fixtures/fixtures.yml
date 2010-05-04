@@ -1,17 +1,19 @@
 Province:
   lusaka:
+    id: '1'
     name: Lusaka
 
 District:
   lusakacity:
+    id: '1'
     name: Lusaka City
-    province: lusaka
+    province_id: '1'
 
 Transporter:
   trans_eric:
-    sf_guard_user_id: sgu_eric
+    GuardUser: sgu_eric
     company: Summeling
-    district_id: lusakacity
+    District: lusakacity
     address: 'indepedent avenue 231'
     email_address: 'summeling@example.com'
     tel: '0876666666'
@@ -21,9 +23,9 @@ Transporter:
 
 Customer:
   cust_hans:
-    sf_guard_user_id: sgu_hans
+    GuardUser: sgu_hans
     company: AuxZambia
-    district_id: lusakacity
+    District: lusakacity
     address: leopard hill 2342
     email_address: 'rip@example.com'
     tel: '0876683452'
@@ -49,8 +51,8 @@ TransportLoad:
   TransportLoad_1:
     Customer: cust_hans
     Transporter: trans_eric
-    from: lusakacity
-    to: lusakacity
+    FromDistrict: lusakacity
+    ToDistrict: lusakacity
     load_description: 'Butter, Cheese and Eggs'
     Package: Cooling
     weight: '50'
