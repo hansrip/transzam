@@ -1,0 +1,18 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+##CONFIG##
+    # extra: [show, print, export]
+
+    config:
+      actions:
+        _new: { ui-icon: plus }
+      object_actions:
+        _edit: { ui-icon: pencil }
+      fields:  ~
+      list:    ~
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~
+      show:    ~

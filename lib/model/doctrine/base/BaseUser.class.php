@@ -14,7 +14,6 @@
  * @property string $cell
  * @property string $comment
  * @property integer $sms_number
- * @property string $token
  * @property string $user_type
  * @property integer $number_of_trucks
  * @property string $business
@@ -30,7 +29,6 @@
  * @method string      getCell()             Returns the current record's "cell" value
  * @method string      getComment()          Returns the current record's "comment" value
  * @method integer     getSmsNumber()        Returns the current record's "sms_number" value
- * @method string      getToken()            Returns the current record's "token" value
  * @method string      getUserType()         Returns the current record's "user_type" value
  * @method integer     getNumberOfTrucks()   Returns the current record's "number_of_trucks" value
  * @method string      getBusiness()         Returns the current record's "business" value
@@ -45,7 +43,6 @@
  * @method User        setCell()             Sets the current record's "cell" value
  * @method User        setComment()          Sets the current record's "comment" value
  * @method User        setSmsNumber()        Sets the current record's "sms_number" value
- * @method User        setToken()            Sets the current record's "token" value
  * @method User        setUserType()         Sets the current record's "user_type" value
  * @method User        setNumberOfTrucks()   Sets the current record's "number_of_trucks" value
  * @method User        setBusiness()         Sets the current record's "business" value
@@ -97,10 +94,6 @@ abstract class BaseUser extends sfDoctrineRecord
         $this->hasColumn('sms_number', 'integer', null, array(
              'type' => 'integer',
              ));
-        $this->hasColumn('token', 'string', 255, array(
-             'type' => 'string',
-             'length' => 255,
-             ));
         $this->hasColumn('user_type', 'string', 255, array(
              'type' => 'string',
              'length' => 255,
@@ -119,6 +112,10 @@ abstract class BaseUser extends sfDoctrineRecord
               'user_type' => 'transporter',
              ),
              'Customer' => 
+             array(
+              'user_type' => 'customer',
+             ),
+             'ExtendedCustomer' => 
              array(
               'user_type' => 'customer',
              ),

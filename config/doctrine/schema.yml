@@ -32,17 +32,10 @@ User:
     comment: { type: string(255) }
     # Two additional "login" names.
     sms_number: { type: integer }
-    token: { type: string(255) }
   relations:
     GuardUser:
         class: sfGuardUser
         foreignType: one
-# Deze foreign relatie wordt automatisch gelegd!
-#    InDistrict:
-#       class: District
-#       onDelete: CASCADE # Lijkt me  niet juist. een district staat toch op zichzelf?
-#       local: district_id
-#       foreign: id
 
 # TranszamTransporter describes the transporter
 Transporter:
@@ -63,6 +56,30 @@ Customer:
     keyValue : customer
   columns:
     business: { type : string(255) }
+
+ExtendedCustomer :
+  inheritance:
+    extends: Customer
+    type : column_aggregation
+    keyField: user_type
+    keyValue: customer
+  relations:
+    PreferredTransporters:
+      class: Transporter
+      refClass: CustomerPreferredTransporter
+      local: customer_id
+      foreign: transporter_id
+      foreignAlias: Transporters
+
+# Een customer met preffered transporters
+CustomerPreferredTransporter:
+  columns:
+    customer_id:  { type: integer, primary: true }
+    transporter_id: { type: integer, primary: true }
+  relations:
+    Customer:  { onDelete: CASCADE, local: customer_id, foreign: id }
+    Transporter: { onDelete: CASCADE, local: transporter_id, foreign: id }
+
 
 # TranszamTransportLoad has loads from the customer to the transporter.
 TransportLoad:

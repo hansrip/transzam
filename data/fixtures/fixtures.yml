@@ -21,6 +21,17 @@ Transporter:
     comment: De tweede user aangemaakt ooit
     number_of_trucks: '10'
 
+  trans_eric2:
+    GuardUser: sgu_eric2
+    company: Summeling2
+    District: lusakacity
+    address: 'indepedent avenue 22222222'
+    email_address: 'summeling2@example.com'
+    tel: '022222222'
+    cell: '0222222222'
+    comment: De tweede eric die is aangemaakt
+    number_of_trucks: '222'
+
 Customer:
   cust_hans:
     GuardUser: sgu_hans
@@ -33,6 +44,19 @@ Customer:
     comment: De eerste user aangemaakt ooit
     business: Zuivelwaar
 
+ExtendedCustomer:
+  cust_extklaas:
+    GuardUser : sgu_extklaas
+    company: Iconnect
+    District: lusakacity
+    address: LusakaRoad 23
+    email_address: 'klaas@example.com'
+    tel: '09787656754'
+    cell: '097686435'
+    comment: A extended user klaas
+    business: Woodcompany
+    PreferredTransporters : [trans_eric, trans_eric2]
+    
 Package:
   Bag:
     name: Bag

@@ -16,5 +16,7 @@ class CustomerForm extends BaseCustomerForm
   public function configure()
   {
     parent::configure();
+      unset($this['number_of_trucks']);
+
   }
 }

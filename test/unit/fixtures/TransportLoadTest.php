@@ -22,9 +22,9 @@ $q = Doctrine_Query::create()
 
 $transportLoads= $q->execute();
 
-/* Test purpose 
- * $t->is($transportLoads->toArray(), 'NULL', '-> fixture TransportLoad. Array checked');
- */
+/* Test purpose */
+  $t->is($transportLoads->toArray(), 'NULL', '-> fixture TransportLoad. Array checked');
+ 
 
 $t->is($transportLoads[0]->tg_username, 'ericsummeling',
                     '-> fixture TransportLoad. Transporter proper defined.');

@@ -1,3 +1,25 @@
+sf_guard_signin:
+  url:                    /login
+  param:                  { module: sfGuardAuth, action: signin }
+
+package:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Package
+    module:               package
+    prefix_path:          /package
+    column:               id
+    with_wildcard_routes: true
+
+transport_load:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                TransportLoad
+    module:               transport_load
+    prefix_path:          /transport_load
+    column:               id
+    with_wildcard_routes: true
+
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 

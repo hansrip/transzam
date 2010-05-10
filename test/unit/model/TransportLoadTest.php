@@ -4,7 +4,7 @@ include(dirname(__FILE__).'/../../bootstrap/Doctrine.php');
 
 $t = new lime_test(1);
 
-$t->fail('TODO :write save(0 tests')
+$t->fail('TODO :write save() tests')
 
 
 #$expiresAt = date('Y-m-d', time() + 86400 * sfConfig::get('app_active_days'));

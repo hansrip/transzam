@@ -1,0 +1,374 @@
+sfPhpunit plugin
+==============
+
+The `sfPhpunitPlugin` is a symfony plugin that creates stub classes for [PHPUnit](http://www.phpunit.de/) of classes in lib/model (and other directories). Unit testing and functional testing are supported. 
+
+Symfony provides a testing framework, but many times it is necessary to use an existing PHPUnit installation. This plugin helps
+creating the files necessary for PHPUnit to work with symfony classes like Propel/Doctrine extended classes.
+Since 1.0.6 can manage namespaces (folders) in lib/model.
+
+sfPhpunitPlugin does not create test methods for methods on the base classes of the generated model. It only creates test methods for the
+custom methods added by the developer in the classes in lib/model or any other folders.
+
+sfPhpunitPlugin also creates an AllPhpunitTests.php class file that can be used by PHPUnit to run all tests. This created file will include the creation
+of the configuration object with the provided application name and create a connection to the database so propel based objects can be tested.
+
+Migration
+---------
+  * From 1.0.x to 1.0.6 and above
+    
+    __Warning:__
+    
+    The 1.0.6 version of the plugin is now avaliable. A lot of fetures were added and 
+    many things had to be changed in this version, which conflict with older versions and test classes.          
+    If you plan to migrate to 1.x version please follow next instructions.
+      * Backup your tests
+      * Move your tests out of your test folder
+      * Rebuild tests for your models
+      
+                $ symfony phpunit:create-models application
+                
+      * Copy your test code in the according new generated files (Note: all new tests will be saved into test/phpunit/<subfolder>, old path: test/<subfolder>)
+ 
+            
+Requirements
+--------------------
+PHPUnit has to be [installed](http://www.phpunit.de/manual/current/en/installation.html) on the test machine and it has to be available with the **phpunit** command from command line.
+
+The recommended version is 3.4.x but it also can be run on the 3.3.x versions.
+On the 3.3.x version some features are not working now for example sfPhpunit. Please upgrade your PHPUnit lib up to 3.4.x or more. 
+
+Installation
+--------------------
+
+  * Install the plugin
+
+        $ symfony plugin:install sfPhpunitPlugin
+        
+  * Enable Plugin (Only for Symfony 1.2 and above)
+
+   Modify config/ProjectConfiguration.class.php
+   
+        [php]
+          public function setup()
+          {
+            // for compatibility / remove and enable only the plugins you want
+            $this->enableAllPluginsExcept('sfDoctrinePlugin');
+        
+            // or
+            
+        	$this->enablePlugins(array('sfPropelPlugin', 'sfPhpunitPlugin'));
+        	$this->disablePlugins(array('sfDoctrinePlugin'));
+        
+          }        
+
+Running tests
+--------------------
+
+  If you plase suites in directories it will be automatically handled. In any case if you run a single test or all test the tree of the suites will be the same
+
+  * Run all test in the phpunit directory and all subdirectories.
+
+        $ php symfony phpunit:runtest frontend
+   
+  * Run all test in the /phpunit/unit directory.
+  
+        $ php symfony phpunit:runtest frontend unit 
+  
+  * Run all test in the /phpunit/unit directory and all subdirectories.
+  
+        $ php symfony phpunit:runtest frontend unit/*
+  
+  * Run a single UserTest.php test case.
+  
+        $ php symfony phpunit:runtest frontend unit/models/UserTest.php
+        
+Using from the web
+--------------------
+
+  Add in settings.yml
+
+    test:
+      .settings:
+        enabled_modules:        [sfPhpunit]
+            
+  Add frontend_test.php that starts app in a test env.
+  
+    [php]
+    <?php
+     
+      require_once(dirname(__FILE__).'/../config/ProjectConfiguration.class.php');
+
+      $configuration = ProjectConfiguration::getApplicationConfiguration('frontend', 'test', true);
+      sfContext::createInstance($configuration)->dispatch();
+      
+  And try to type in browser:
+          
+    your_url/frontend_test.php/sfPhpunit
+    
+Fixtures
+--------------------
+
+    [php]
+    <?php
+     
+      class Amf_Service_AuthenticationTestCase 
+        extends sfBasePhpunitAmfTestCase 
+        //for using fixtures you need to implement on of the aggregator interfaces.
+        implements sfPhpunitFixturePropelAggregator 
+      {
+        public function testRegistratedTryAccessToNotAllowedService()
+        {
+          //clean the database and load own(the fixtures that only avaliable for this test)
+          $this->fixture()->clean()->loadOwn('registration');
+          
+          //get loaded ORM object. in our case it will be propel object
+          $registration = $this->fixture()->get('Registration_Registration_1');
+          
+          // ... do testing
+        }
+      }
+
+Creation of unit tests
+--------------------
+
+  * Create all model tests (Propel)
+  
+        $ symfony phpunit:create-models application
+        
+    This command will go over the lib/model directory and for each .php file it will create a fileTest.php in test/phpunit/models/.
+   
+  * **option type**: Create all model tests of another type (Doctrine)
+  
+        $ symfony phpunit:create-models application --type=doctrine
+        
+    This command will go over the lib/model/doctrine directory and for each .php file it will create a fileTest.php in test/phpunit/models/.
+
+  * **options class, class_path, file_suffix**: Generate a test class for a custom class
+  
+        $ symfony phpunit:create-models --class=myClass --class_path="lib/subfolder" --file_suffix=".class.php" application
+    
+    Unlike in the former examples you have here the possibility to point to the custom folder of your class and to define the file suffix/extension directly.
+       
+  * **options overwrite, overwrite_alltests, overwrite_base_test**: If you want to overwrite your existing classes during file generation use the overwrite option (overwrites your test class and the bootstrap file). If you want to overwrite the base class and the AllTests file you may use the options *overwrite_alltests*, *overwrite_base_test*. Existing classes are not overwritten by default.        
+  
+        $ symfony phpunit:create-models --overwrite=true --class=myClass --class_path="lib/subfolder" --file_suffix=".class.php" application
+         
+  * Help of all arguments and options
+  
+        $ symfony help phpunit:create-models
+
+Common usage
+--------------------
+PHPUnit uses __setUp__ and __tearDown__ methods for doing stuff just before and after a test is called.
+In this plugin you may not have to overwrite those methods, but **_start** and **_end**.
+With this approach you do not have to call the parent methods, if you have to overwrite it (the same approach like
+the configure/setup methods in the forms system).  
+
+Usage of unit tests
+--------------------
+Unit tests **create** a sfContext instance creating by helper method in BasePhpunitSuite (in root phpunti dir). 
+If you do not want to init context comment this line. You can add a suite class in a subfolder and init context there. 
+       
+        protected function _start()
+        {
+          $this->_setupContext();
+        }
+
+Creation of functional tests (new in 1.0.6)
+--------------------
+Creating and running unit tests with PHPUnit is quite simple, because the test workflow does not belong to any other symfony class.
+But what about functional tests? The functional tests are using the sfTestFunctional class (sfTestBrowser in former times),
+ which is coupled to the lime_test class.
+For this reason, the 1.0.6 version introduces the new sfPhpunitTest class, which overwrites the normal lime_test class and maps all test methods to
+the nested PHPUnit test case (This approach could be better realized via a testing interface, but symfony 1.2 does not support one).
+This means, that the lime class is still loaded, but its original methods are never called.
+
+Here an example of the normal ok method of the lime class ($this->testCase is the actual functional test case):
+
+    [php]
+    public function ok($exp, $message = '')
+    {
+    	$result = (bool) $exp;
+    	$this->testCase->assertTrue($result, $message);
+    	return $result;
+    }
+
+This approach changes nothing for the usage of the main functional test code, as you may see in the next two listings.
+The first one is the new provided possibiliy with PHPUnit and the second one is the normal way with lime.
+
+Functional test with PHPUnit:
+
+    [php]
+    class fooActionsTest extends BasePhpunitFunctionalTestCase
+    {
+    
+    	public function test1()
+    	{
+    		$browser = $this->getBrowser();
+		
+    		$browser->
+    		get('/foo/index')->
+    
+    		with('request')->begin()->
+    		isParameter('module', 'foo')->
+    		isParameter('action', 'index')->
+    		end()->
+
+    		with('response')->begin()->
+    		isStatusCode(200)->
+    		checkElement('body', '!/This is a temporary page/')->
+    		end()
+    		;
+    	}
+    }
+
+Functional test with lime:
+
+    [php]
+    $browser = new sfTestFunctional(new sfBrowser());
+
+    $browser->
+      get('/api/index')->
+
+      with('request')->begin()->
+        isParameter('module', 'api')->
+        isParameter('action', 'index')->
+      end()->
+
+      with('response')->begin()->
+        isStatusCode(200)->
+        checkElement('body', '!/This is a temporary page/')->
+      end()
+    ;
+
+The only difference is the way one has to fetch the browser instance, afterwards the code is equivalent.
+
+Customize sfPhpunitPlugin generated class files
+-----------------------------------------------
+
+By default, `sfPhpunitPlugin` comes with a set of templates for generating the stub class files.
+These templates are located inside the data plugin directory and can be customized:
+
+  * `functional/BasePhpunitFunctionalTestCase.tpl` - Template for the base _functional_ test case.
+  * `functional/PhpunitFunctionalTestCase.tpl` - Template for generating the individual _functional_ test class files.
+  * `model/_method.tpl` - Template for each test method inside the _unit_ test class file.
+  
+For customizing one of those templates and the others, the only thing you have to do is, to copy the according plugin template to your project data dir __data/sfPhpunitPlugin__.
+The tasks will automatically look if there does exist any custom template. If no custom template is found, the default one within the plugin will be taken.
+
+Example:
+
+    plugins/sfPhpunitPlugin/model/_method.tpl --> project/data/sfPhpunitPlugin/model/_method.tpl
+
+Note, that the subfolder structure has to be adopted.    
+  
+Hints
+==============
+You like the ANSI colors of lime? No problem, PHPUnit has this functionality too and provides it as option.
+
+    [php]
+    phpunit --colors test/phpunit/AllPhpunitTests.php
+
+__Contact us for any other requirements/ideas!__
+
+Plugin tests
+==============
+This plugin is currently bundled with two lime unit tests, which are testing the generation of the skeleton files.
+
+__Warning__:
+If you want to run those tests within your project, please save and backup everything in your test/phpunit folder, thus these tests are
+writing into this folder.
+
+More code snippets
+==============
+    
+Example of a unit test class file
+--------
+
+    [php]
+    <?php
+    
+    /**
+     * sfPhpunitPluginTestClassTest
+     */
+    class sfPhpunitPluginTestClassTest extends sfBasePhpunitTestCase
+    {
+    	/**
+    	* sfPhpunitPluginTestClass
+    	*
+    	* @var sfPhpunitPluginTestClass
+    	*/
+    	protected $o;
+    
+    	protected function _start()
+    	{
+    		$this->o = new sfPhpunitPluginTestClass();
+    	}
+    
+    	public function testSetFoo()
+    	{
+    		$this->markTestIncomplete(
+    			'This test has not been implemented yet.'
+    		);
+    	}    
+
+    	public function testGetFoo()
+    	{
+    		$this->markTestIncomplete(
+    			'This test has not been implemented yet.'
+    		);
+    	}    
+
+    	protected function _end()
+    	{
+    	}
+
+    }
+    
+Example of a functional test class file
+--------
+    [php]
+    <?php
+
+    class fooActionsTest extends sfBasePhpunitFunctionalTestCase
+    {
+    
+    	public function getApplication()
+    	{
+    		return 'service';
+    	}
+
+    	public function getEnvironment()
+    	{
+    		return 'test';
+    	}
+
+    	public function test1()
+    	{
+    		$browser = $this->getBrowser();
+
+    		$browser->
+    		get('/foo/index')->
+    
+    		with('request')->begin()->
+    		isParameter('module', 'foo')->
+    		isParameter('action', 'index')->
+    		end()->
+
+    		with('response')->begin()->
+    		isStatusCode(200)->
+    		checkElement('body', '!/This is a temporary page/')->
+    		end()
+    		;
+    	}
+    }
+    
+TODO
+--------------------
+
+  * Auto form tester
+  * More inteligent init task
+  * DbUnit fixtures
+  * Custom testcases like amf.
+  * Selenium.

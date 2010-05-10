@@ -11,6 +11,14 @@ sfGuardUser:
      username: ericsummeling
      password: mYsECRET
      is_super_admin: false
+  sgu_eric2:
+     username: ericsummeling2
+     password: mYsECRET2
+     is_super_admin: false
+  sgu_extklaas:
+     username: extklaas
+     password: mYsECRETklaas
+     is_super_admin: false
 
 sfGuardPermission:
   sgp_admin:
@@ -52,6 +60,12 @@ sfGuardUserGroup:
   sgug_hans:
     sfGuardGroup:       sgg_customer
     sfGuardUser:        sgu_hans
+  sgug_extklaas:
+    sfGuardGroup:       sgg_customer
+    sfGuardUser:        sgu_extklaas
   sgug_eric:
     sfGuardGroup:       sgg_transporter
     sfGuardUser:        sgu_eric
+  sgug_eric2:
+    sfGuardGroup:       sgg_transporter
+    sfGuardUser:        sgu_eric2
