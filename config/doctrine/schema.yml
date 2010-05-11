@@ -106,3 +106,11 @@ TransportLoad:
         class: District
         local: to_district
         foreign: id
+
+
+# TranszamTransportLoad has loads from the customer to the transporter.
+AdminSettings:
+  actAs: {Timestampable: ~ }
+  columns:
+    transportload_expiration_in_days: { type: timestamp, notnull: true }
+

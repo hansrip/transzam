@@ -1,13 +1,15 @@
+AdminSettings:
+  one_record:
+    transportload_expiration_in_days : '30'
+
 Province:
   lusaka:
-    id: '1'
     name: Lusaka
 
 District:
   lusakacity:
-    id: '1'
     name: Lusaka City
-    province_id: '1'
+    Province: lusaka
 
 Transporter:
   trans_eric:

@@ -12,5 +12,21 @@
  */
 class TransportLoad extends BaseTransportLoad
 {
+public function save(Doctrine_Connection $conn = null)
+  {
+    if ($this->isNew() && !$this->getExpiredAt())
+    {
+      /* ExpiredAt adds 30 days after the ArriveAfter date.
+       * TODO : 30 days is now a fixed duration. Should be a administrator value which should be maintained via a Class.
+       */
+      $now = $this->getArriveAfter() ? $this->getDateTimeObject('created_at')->format('U') : time();
+      
+      $this->setExpiredAt(date('Y-m-d H:i:s', $now + 86400 * AdminSettingsTable::getInstance()->get('TransportloadExpirationInDays')));
+
+
+    }
+
+    return parent::save($conn);
+  }
 
 }

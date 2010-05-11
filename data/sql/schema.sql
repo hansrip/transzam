@@ -1,3 +1,4 @@
+CREATE TABLE admin_settings (id BIGINT AUTO_INCREMENT, transportload_expiration_in_days DATETIME NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE user (id BIGINT AUTO_INCREMENT, sf_guard_user_id INT, company VARCHAR(255), district_id BIGINT, address VARCHAR(255), email_address VARCHAR(255), tel VARCHAR(255), cell VARCHAR(255), comment VARCHAR(255), sms_number BIGINT, user_type VARCHAR(255), number_of_trucks BIGINT, business VARCHAR(255), INDEX sf_guard_user_id_idx (sf_guard_user_id), INDEX district_id_idx (district_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE customer_preferred_transporter (customer_id BIGINT, transporter_id BIGINT, PRIMARY KEY(customer_id, transporter_id)) ENGINE = INNODB;
 CREATE TABLE district (id BIGINT AUTO_INCREMENT, name VARCHAR(50), province_id BIGINT NOT NULL, INDEX province_id_idx (province_id), PRIMARY KEY(id)) ENGINE = INNODB;
